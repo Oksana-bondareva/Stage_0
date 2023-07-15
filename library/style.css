@@ -2,13 +2,41 @@
     box-sizing: border-box;
   }
 
-body {
-    width: 1440px;
-    background-color: darkgrey;
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, img, ol, ul, li, form, label, footer, header,
+menu, nav, html, body,
+h1, h2, h3, h4, h5, h6, p,
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+} 
+
+  html {
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: rgb(189, 199, 199);
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    background-color: #0C0C0E;
 }
 
 .nav-menu {
     cursor: pointer;
+    width: Hug (584px);
+    height: Hug (50px);
+    margin-top: 20px;
+    margin-left: 474px;
 }
 
 .ul-menu {
@@ -27,15 +55,11 @@ body {
     margin-left: 30px;
 }
 
-.header-container {
-    display: flex;
-    text-align: center;
-    width: 100%;
-    height: 90px;
-    background-color: #0C0C0E;
-}
-
 .p-header {
+    width: 294px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
     color: white;
     font-family: Forum;
     font-size: 30px;
@@ -48,6 +72,67 @@ body {
 .icon-profile {
     width: 28px;
     height: 28px;
-    top: 31px;
-    text-align: right;
+    margin-top: 31px;
+    margin-right: 20px;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .welcome {
+    height: 600px;
+    background-image: url(img/image-welcome.png); 
+  }
+
+  .h1-conteiner {
+    position: absolute;
+    margin-top: 220px;
+    background-color: #0C0C0E;
+    width: 600px;
+    height: 220px;
+    padding: 35px 40px 35px 40px;
+  }
+
+  h1 {
+    width: 520px;
+    height: 150px;
+    color: #FFFFFF;
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+  }
+
+  .about {
+    height: 837px;
+  }
+
+  .favorites {
+    height: 1439px;
+  }
+
+  .coffeshop {
+    height: 841px;
+    padding: 20px 20px 40px 20px;
+  }
+
+  .contacts {
+    height: 575px;
+    padding: 20px 20px 40px 20px;
+  }
+
+  .librarycard {
+    height: 614px;
+  }
+
+  .footer {
+    height: 250px;
+    margin-top: 4996px;
+    background-color: #0C0C0E;
+  }
