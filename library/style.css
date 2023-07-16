@@ -51,6 +51,11 @@ nav, h1, h2, h3, p, section {
     margin-left: 30px;
 }
 
+a:hover {
+    color: #BB945F;
+    transition: 1s;
+}
+
 h1 {
     width: 294px;
     height: 50px;
@@ -115,6 +120,7 @@ a {
 
   .about {
     height: 837px;
+    width: 100%;
   }
 
   .p-about {
@@ -151,6 +157,8 @@ a {
     height: 16px;
     background-color: #BB945F;
     border-radius: 50%;
+    border: 1px solid #BB945F;
+    cursor: pointer;
    }
 
    .pagination2 {
@@ -158,36 +166,237 @@ a {
     height: 16px;
     background-color: #000000;
     border-radius: 50%;
+    border: 1px solid #000000;
+    cursor: pointer;
    }
 
    .pagination3 {
     width: 16px;
     height: 16px;
     background-color: #0C0C0E;
+    border: 1px solid #0C0C0E;
     border-radius: 50%;
+    cursor: pointer;
    }
 
    .block-pagination {
     width: 26px;
     height: 26px;
+    cursor: pointer;
    }
 
   .favorites {
     height: 1439px;
+    width: 100%;
   }
+
+  .p-favorites {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+
+  .radio-button {
+    display: flex;
+    width: 700px;
+    height: 24px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+
+  #winter, #summer, #spring, #autumn {
+    width: 17px;
+    height: 17px;
+    color: #000000;
+    cursor: pointer;;
+  }
+
+  .radio-button-text {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 90px;
+    cursor: pointer;
+  }
+
+  .radio-button-conteiner {
+    display: flex;
+    height: 34px;
+    cursor: pointer;
+  }
+
+  .radio-button label:hover:before {
+    font-weight: 900;
+  }
+
+  .books-winter, .books-spring, .books-summer, .books-autumn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .books-spring, .books-summer, .books-autumn {
+    display: none;
+  }
+
+  .book {
+    position: relative;
+    width: 595px;
+    height: 555px;
+    margin-bottom: 40px;
+  }
+
+  .book-border {
+    width: 550px;
+    height: 555px;
+    border: 1px solid #000;
+  }
+
+  .h3-favorites {
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+
+  .line1 {
+    margin-left: 20px;
+  }
+  
+  .book-name {
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-left: 20px;
+  }
+
+  .h3-uppercase {
+    text-transform: uppercase;
+  }
+
+  .about-book {
+    width: 355px;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 266.667% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-left: 20px;
+  }
+
+  .buy {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 75px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .buy:hover {
+    width: 75px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid #BB945F;
+    background: #BB945F;
+    transition: 2s;
+  }
+
+  .own {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 75px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid #BB945F;
+    color: #BB945F;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  .book-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 300px;
+    margin-top: -255px;
+}
 
   .coffeshop {
     height: 841px;
+    width: 100%;
     padding: 20px 20px 40px 20px;
+  }
+
+  .p-coffeshop {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .contacts {
     height: 575px;
+    width: 100%;
     padding: 20px 20px 40px 20px;
   }
 
   .librarycard {
     height: 614px;
+    width: 100%;
   }
 
   h2 {
