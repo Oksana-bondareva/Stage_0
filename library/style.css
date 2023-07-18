@@ -51,7 +51,7 @@ nav, h1, h2, h3, p, section {
     margin-left: 30px;
 }
 
-a:hover {
+.nav-link:hover {
     color: #BB945F;
     font-weight: 900;
     transition: 1s;
@@ -80,7 +80,7 @@ h1 {
     margin-left: 40px;
 }
 
-a {
+.nav-link {
     text-decoration: none;
     color: white;
   }
@@ -96,7 +96,7 @@ a {
     text-transform: capitalize;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   h2::after {
@@ -423,7 +423,6 @@ a {
     line-height: 40px; /* 200% */
     letter-spacing: 2px;
     text-transform: capitalize;
-    margin-top: 40px;
     margin-bottom: 40px;
   }
 
@@ -516,6 +515,63 @@ a {
     height: 575px;
     width: 100%;
     padding: 20px 20px 40px 20px;
+  }
+
+  .h3-contacts {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .contacts-conteiner {
+    position: relative;
+  }
+
+  .img-map {
+    position: absolute;
+    width: 696px;
+    height: 414px;
+    background: lightgray 50% / cover no-repeat;
+    right: 0;
+    top: 0;
+  }
+
+  .contacts-emeil {
+    margin-top: 40px;
+  }
+
+  .p-contacts {
+   color: #000;
+   font-family: Inter;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 40px; /* 200% */
+   letter-spacing: 2px;
+   text-transform: capitalize;
+   margin-top: 20px;
+  }
+
+  .a-tel {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .a-malito {
+    text-decoration: none;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
   }
 
   .librarycard {
