@@ -14,9 +14,12 @@ nav, h1, h2, h3, p, section, input {
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
+    background-color: rgb(189, 199, 199);
+  }
+
+  .wrapper {
     width: 1440px;
     margin: 0 auto; 
-    background-color: rgb(189, 199, 199);
   }
 
   .header-container {
