@@ -54,7 +54,7 @@ nav, h1, h2, h3, p, section, input {
 
 .nav-link:hover {
     color: #BB945F;
-    font-weight: 900;
+    text-decoration-line: underline;
     transition: 1s;
 }
 
@@ -87,7 +87,7 @@ h1 {
     color: white;
   }
 
-  h2 {
+  .h2-section {
     color: #0C0C0E;
     font-family: Forum;
     font-size: 40px;
@@ -101,7 +101,7 @@ h1 {
     margin-bottom: 40px;
   }
 
-  h2::after {
+  .h2-section::after {
     display: block;
     position: relative;
     text-align: center;
@@ -132,7 +132,7 @@ h1 {
     padding: 35px 40px 35px 40px;
   }
 
-  .p-welcome {
+  .h2-welcome {
     width: 520px;
     height: 150px;
     color: #FFF;
@@ -541,7 +541,7 @@ h1 {
     margin-bottom: 20px;
   }
 
-  .contacts-conteiner {
+  .contacts-imform {
     position: relative;
   }
 
@@ -604,7 +604,7 @@ h1 {
     width: 100%;
   }
 
-  .librarycard-conteiner {
+  .librarycard-box {
     display: flex;
     justify-content: space-between;
   }
@@ -620,7 +620,7 @@ h1 {
   }
 
   .h3-find-card {
-  color: #000;
+   color: #000;
    font-family: Inter;
    font-size: 30px;
    font-style: normal;
@@ -716,6 +716,7 @@ h1 {
     letter-spacing: 2px;
     margin: 0 auto;
     display: block;
+    cursor: pointer;
   }
 
   .p-get-a-card {
@@ -748,6 +749,7 @@ h1 {
     letter-spacing: 1px;
     display: inline-block;
     float: right;
+    cursor: pointer;
   }
 
   .log-in {
@@ -761,8 +763,121 @@ h1 {
     background: #FFFFFF;
   }
 
-  .footer {
+  .conteiner-footer {
     height: 250px;
     width: 100%;
     background-color: #0C0C0E;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .address {
+    width: 229px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+    text-decoration: none;
+  }
+
+  .operating-mode-1, .operating-mode-2 {
+    color: #FFF;
+    text-align: right;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+    width: 140px;
+    letter-spacing: 0.6px;
+  }
+
+  .year {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 100% */
+    letter-spacing: 3px;
+  }
+
+  .rss {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 100% */
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+
+  .username {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+
+  .conteiner-footer-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .social-icons {
+    list-style-type: none;
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .conteiner-footer-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+
+  .social-icon-li {
+    margin-right: 15px;
+  }
+
+  .conteiner-footer-2::after {
+    display: block;
+    position: absolute;
+    text-align: center;
+    content: '';
+    height: 1px; 
+    width: 1400px;
+    background: #FFFFFF;
+    margin: 65px auto 0;
+   } 
+
+   .conteiner-footer-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 75px;
+  }
+
+  .sign-up:hover, .log-in:hover, .form-submit:hover {
+    border-radius: 2px;
+    border: 1px solid #BB945F;
+    background: #BB945F;
+    transition: 2s;
   }
