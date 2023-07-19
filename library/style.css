@@ -4,7 +4,7 @@
 
 html, body, div, span, main, p,
 a, img, ol, ul, li, form, label, footer, header,
-nav, h1, h2, h3, p, section {
+nav, h1, h2, h3, p, section, input {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -232,7 +232,7 @@ h1 {
   }
 
   .radio-button {
-    display: flex;
+    display: inline-flex;
     width: 700px;
     height: 24px;
     margin-left: 20px;
@@ -244,8 +244,9 @@ h1 {
     height: 17px;
     color: #000000;
     cursor: pointer;
-    stroke-width: 2px;
+    stroke-width: 4px;
     stroke: #000;
+    margin-right: 20px;
   }
 
   .radio-button-text {
@@ -257,7 +258,6 @@ h1 {
     line-height: normal;
     letter-spacing: 2px;
     margin-right: 90px;
-    margin-left: 10px;
     cursor: pointer;
     letter-spacing: 2px;
   }
@@ -440,8 +440,6 @@ h1 {
   .coffee-tea {
     display: inline-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     width: 438px;
     height: 520px;
   }
@@ -457,8 +455,7 @@ h1 {
 
   .menu-item-1 {
     display: inline-flex;
-    justify-content: left;
-    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 40px;
   }
@@ -605,6 +602,156 @@ h1 {
   .librarycard {
     height: 614px;
     width: 100%;
+  }
+
+  .librarycard-conteiner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .get-a-card {
+    height: 614px;
+    margin-right: 20px;
+  }
+
+  .find-card {
+    margin-left: 20px;
+    width: 600px;
+  }
+
+  .h3-find-card {
+  color: #000;
+   font-family: Inter;
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   letter-spacing: 2.3px;
+   text-align: center;
+   margin-bottom: 30px;
+  }
+
+  .form-conteiner {
+    width: 560px;
+    height: 272px;
+    flex-shrink: 0;
+    background: #BB945F;
+    margin: 20px;
+  }
+
+  .h3-get-a-card {
+   color: #000;
+   text-align: right;
+   font-family: Forum;
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   letter-spacing: 0.6px;
+  }
+
+  .p-get-a-card {
+   width: 456px;
+   color: #000;
+   text-align: right;
+   font-family: Inter;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 40px; /* 200% */
+   letter-spacing: 0.4px;
+   margin-bottom: 35px;
+  }
+
+  .form-card {
+   width: 600px;
+   height: 386px;
+   flex-shrink: 0;
+   border: 3px solid #BB945F;
+  }
+
+  .form-name {
+    color: #000;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.3px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .form-text {
+    width: 520px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    color: #8E8E8E;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+
+  .form-submit {
+    padding: 10px 40px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .p-get-a-card {
+    width: 456px;
+    color: #000;
+    text-align: right;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 1.7px;
+    margin-top: 35px;
+  }
+
+  .sign-up, .log-in {
+    width: 75px;
+    height: 30px;
+    padding: 10px 0px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    display: inline-block;
+    float: right;
+  }
+
+  .log-in {
+    margin-left: 20px;
   }
 
   section {
