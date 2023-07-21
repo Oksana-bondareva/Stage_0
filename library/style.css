@@ -1,6 +1,6 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 html, body, div, span, main, p,
 a, img, ol, ul, li, form, label, footer, header,
@@ -128,7 +128,7 @@ h1 {
    } 
 
    .welcome {
-    background-image: url(img/image-welcome.png);
+    background-color: inherit;
     height: 600px;
     width: 1440px;
     margin: 0 auto;
