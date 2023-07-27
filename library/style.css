@@ -807,7 +807,7 @@ h1 {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 100% */
+    line-height: 20px;
     letter-spacing: 3px;
   }
 
@@ -818,7 +818,7 @@ h1 {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 100% */
+    line-height: 20px; 
     letter-spacing: 2px;
     text-decoration: none;
   }
@@ -830,7 +830,7 @@ h1 {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 200% */
+    line-height: 20px; 
     letter-spacing: 2px;
     text-decoration: none;
   }
@@ -869,7 +869,7 @@ h1 {
     height: 1px; 
     width: 1400px;
     background: #FFFFFF;
-    margin: 65px auto 0;
+    margin: 65px auto;
    } 
 
    .conteiner-footer-3 {
@@ -883,6 +883,11 @@ h1 {
   .sign-up:hover, .log-in:hover, .form-submit:hover {
     border-radius: 2px;
     border: 1px solid #BB945F;
+    background: #BB945F;
+    transition: 2s;
+  }
+
+  .icons-svg:hover, .rss:hover, .username:hover, .address:hover {
     background: #BB945F;
     transition: 2s;
   }
