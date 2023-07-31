@@ -274,7 +274,7 @@ h1 {
     cursor: pointer;
   }
 
-  .radio-button label:hover:before {
+  .radio-button label:hover::before {
     font-weight: 900;
   }
 
