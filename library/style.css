@@ -274,8 +274,13 @@ h1 {
     cursor: pointer;
   }
 
-  .radio-button label:hover:before {
+  .radio-button-text label:hover::before {
     font-weight: 900;
+
+  }
+
+  input[type="radio"]:checked + label {
+    font-weight: 700;
   }
 
   .books-winter, .books-spring, .books-summer, .books-autumn {
@@ -891,3 +896,5 @@ h1 {
     background: #BB945F;
     transition: 2s;
   }
+
+ 
