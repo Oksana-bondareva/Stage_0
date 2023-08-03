@@ -47,13 +47,12 @@ nav, h1, h2, h3, p, section, input {
 }
 
 .li-menu {
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 50px; /* 250% */
-    letter-spacing: 1.6px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 250% */
 }
 
 .nav-link:hover {
@@ -165,7 +164,6 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 1.4px;
     margin-bottom: 20px;
   }
 
@@ -174,7 +172,7 @@ h1 {
     justify-content: space-around;
    }
 
-   .img-slaider {
+   .img-slaider1, .img-slaider2, .img-slaider3 {
     width: 450px;
     height: 560px;
    }
@@ -226,7 +224,7 @@ h1 {
 
   .p-favorites {
     color: #000;
-    font-family: Inter, sans-serif;
+    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -237,7 +235,7 @@ h1 {
 
   .radio-button {
     display: inline-flex;
-    width: 700px;
+    width: 720px;
     height: 24px;
     margin-left: 20px;
     margin-bottom: 40px;
@@ -261,11 +259,11 @@ h1 {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
     margin-right: 90px;
     cursor: pointer;
-    letter-spacing: 1.2px;
+    text-align: left;
   }
 
   .radio-button-conteiner {
@@ -274,7 +272,7 @@ h1 {
     cursor: pointer;
   }
 
-  .radio-button-text label:hover::before {
+  .radio-button label:hover::before {
     font-weight: 900;
   }
 
@@ -310,7 +308,7 @@ h1 {
 
   .h3-favorites {
     color: #000;
-    font-family: Forum, sans-serif;
+    font-family: Forum;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -335,7 +333,7 @@ h1 {
 
   .book-name {
     color: #000;
-    font-family: Inter, sans-serif;
+    font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
@@ -352,12 +350,12 @@ h1 {
   .about-book {
     width: 355px;
     color: #000;
-    font-family: Inter, sans-serif;
+    font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 266.667% */
-    letter-spacing: 2.38px;
+    letter-spacing: 2px;
     text-transform: capitalize;
     margin-left: 20px;
   }
@@ -435,7 +433,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 3.5px;
+    letter-spacing: 2px;
     margin-bottom: 40px;
   }
 
@@ -443,14 +441,12 @@ h1 {
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 40px;
     justify-content: space-between;
   }
 
   .coffee-tea {
     display: inline-flex;
     flex-direction: column;
-    width: 438px;
     height: 520px;
   }
 
@@ -517,7 +513,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 2.8px;
+    letter-spacing: 2px;
     text-transform: capitalize;
   }
 
@@ -534,7 +530,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: 40px; /* 200% */
-    letter-spacing: 2.8px;
+    letter-spacing: 2px;
     text-transform: capitalize;
     margin-bottom: 40px;
   }
@@ -571,7 +567,7 @@ h1 {
    font-style: normal;
    font-weight: 400;
    line-height: 40px; /* 200% */
-   letter-spacing: 3.2px;
+   letter-spacing: 2px;
    text-transform: capitalize;
    margin-top: 20px;
   }
@@ -583,7 +579,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 2.9px;
+    letter-spacing: 2px;
     text-transform: capitalize;
    }
 
@@ -594,7 +590,7 @@ h1 {
   .a-tel {
     text-decoration: none;
     color: #000000;
-    letter-spacing: 2.9px;
+    letter-spacing: 2px;
   }
 
   .a-malito {
@@ -605,7 +601,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
-    letter-spacing: 2.9px;
+    letter-spacing: 2px;
     text-transform: capitalize;
   }
 
@@ -636,7 +632,7 @@ h1 {
    font-style: normal;
    font-weight: 400;
    line-height: normal;
-   letter-spacing: 2.3px;
+   letter-spacing: 0.6px;
    text-align: center;
    margin-bottom: 30px;
   }
@@ -661,7 +657,6 @@ h1 {
   }
 
   .p-get-a-card {
-   width: 456px;
    color: #000;
    text-align: right;
    font-family: Inter;
@@ -687,7 +682,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 50px; /* 166.667% */
-    letter-spacing: 0.3px;
+    letter-spacing: 0.6px;
     margin-left: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -723,7 +718,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin: 0 auto;
     display: block;
     cursor: pointer;
@@ -738,7 +733,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 1.7px;
+    letter-spacing: 0.4px;
     margin-top: 35px;
   }
 
@@ -801,8 +796,6 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 133.333% */
-    width: 140px;
-    letter-spacing: 0.6px;
   }
 
   .year {
@@ -813,7 +806,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
 
   .rss {
@@ -826,7 +819,7 @@ h1 {
     line-height: 20px; 
     letter-spacing: 2px;
     text-decoration: none;
-    margin-left: 100px;
+    margin-left: 155px;
   }
 
   .username {
@@ -852,7 +845,6 @@ h1 {
   .social-icons {
     list-style-type: none;
     display: flex;
-    margin-top: 10px;
   }
 
   .conteiner-footer-2 {
@@ -897,5 +889,3 @@ h1 {
     background: #BB945F;
     transition: 2s;
   }
-
- 
