@@ -47,13 +47,12 @@ nav, h1, h2, h3, p, section, input {
 }
 
 .li-menu {
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 50px; /* 250% */
-    letter-spacing: 1.6px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 250% */
 }
 
 .nav-link:hover {
@@ -165,7 +164,6 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 1.4px;
     margin-bottom: 20px;
   }
 
@@ -174,7 +172,7 @@ h1 {
     justify-content: space-around;
    }
 
-   .img-slaider {
+   .img-slaider1, .img-slaider2, .img-slaider3 {
     width: 450px;
     height: 560px;
    }
@@ -231,14 +229,13 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 1.4px;
     margin-left: 20px;
     margin-bottom: 40px;
   }
 
   .radio-button {
     display: inline-flex;
-    width: 700px;
+    width: 720px;
     height: 24px;
     margin-left: 20px;
     margin-bottom: 40px;
@@ -253,19 +250,20 @@ h1 {
     stroke: #000;
     margin-right: 20px;
     accent-color: black;
+    margin-top: 4px;
   }
 
   .radio-button-text {
     color: #000;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    letter-spacing: 2px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
     margin-right: 90px;
     cursor: pointer;
-    letter-spacing: 2px;
+    text-align: left;
   }
 
   .radio-button-conteiner {
@@ -276,6 +274,11 @@ h1 {
 
   .radio-button label:hover::before {
     font-weight: 900;
+  }
+
+  input[type="radio"]:checked + label {
+    font-weight: 500;
+    text-shadow:0 0 1.2px black;
   }
 
   .books-winter, .books-spring, .books-summer, .books-autumn {
@@ -430,7 +433,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 3.5px;
+    letter-spacing: 2px;
     margin-bottom: 40px;
   }
 
@@ -438,14 +441,12 @@ h1 {
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 40px;
     justify-content: space-between;
   }
 
   .coffee-tea {
     display: inline-flex;
     flex-direction: column;
-    width: 438px;
     height: 520px;
   }
 
@@ -512,7 +513,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 2.8px;
+    letter-spacing: 2px;
     text-transform: capitalize;
   }
 
@@ -529,7 +530,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: 40px; /* 200% */
-    letter-spacing: 2.8px;
+    letter-spacing: 2px;
     text-transform: capitalize;
     margin-bottom: 40px;
   }
@@ -566,7 +567,7 @@ h1 {
    font-style: normal;
    font-weight: 400;
    line-height: 40px; /* 200% */
-   letter-spacing: 3.2px;
+   letter-spacing: 2px;
    text-transform: capitalize;
    margin-top: 20px;
   }
@@ -578,7 +579,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 2.9px;
+    letter-spacing: 2px;
     text-transform: capitalize;
    }
 
@@ -589,7 +590,7 @@ h1 {
   .a-tel {
     text-decoration: none;
     color: #000000;
-    letter-spacing: 2.9px;
+    letter-spacing: 2px;
   }
 
   .a-malito {
@@ -600,7 +601,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
-    letter-spacing: 2.9px;
+    letter-spacing: 2px;
     text-transform: capitalize;
   }
 
@@ -631,7 +632,7 @@ h1 {
    font-style: normal;
    font-weight: 400;
    line-height: normal;
-   letter-spacing: 2.3px;
+   letter-spacing: 0.6px;
    text-align: center;
    margin-bottom: 30px;
   }
@@ -656,7 +657,6 @@ h1 {
   }
 
   .p-get-a-card {
-   width: 456px;
    color: #000;
    text-align: right;
    font-family: Inter;
@@ -682,7 +682,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 50px; /* 166.667% */
-    letter-spacing: 0.3px;
+    letter-spacing: 0.6px;
     margin-left: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -718,7 +718,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin: 0 auto;
     display: block;
     cursor: pointer;
@@ -733,7 +733,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 1.7px;
+    letter-spacing: 0.4px;
     margin-top: 35px;
   }
 
@@ -796,8 +796,6 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 133.333% */
-    width: 140px;
-    letter-spacing: 0.6px;
   }
 
   .year {
@@ -808,7 +806,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
 
   .rss {
@@ -821,6 +819,7 @@ h1 {
     line-height: 20px; 
     letter-spacing: 2px;
     text-decoration: none;
+    margin-left: 155px;
   }
 
   .username {
@@ -846,7 +845,6 @@ h1 {
   .social-icons {
     list-style-type: none;
     display: flex;
-    margin-top: 10px;
   }
 
   .conteiner-footer-2 {
@@ -890,4 +888,98 @@ h1 {
   .icons-svg:hover, .rss:hover, .username:hover, .address:hover {
     background: #BB945F;
     transition: 2s;
+  }
+
+  @media (max-width: 1024px) {
+    body {
+      width: 100%;
+      height: auto;
+    }
+
+    .nav-menu {
+      display: none;
+    }
+
+    .p-about {
+      width: 95%;
+    }
+
+    .img-slaider2, .img-slaider3 {
+      display: none;
+    }
+
+    .favorites {
+      height: 2629px;;
+    }
+
+    .books-winter, .books-spring, .books-summer, .books-autumn {
+      display: flex;
+      justify-content: center;
+    }
+
+    .books-spring, .books-summer, .books-autumn {
+      display: none;
+    }
+
+    .coffeshop {
+      display: flex;
+      flex-direction: column;
+      height: 1481px;
+    }
+
+    .p-coffeshop {
+      width: 95%;
+      text-align: center;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+    .coffee-tea {
+      
+    }
+
+    .librarycard {
+      height: 857px;
+    }
+
+    .contacts {
+      height: 1055px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .img-map {
+      display: block;
+      position: absolute;
+      left: 164px;
+      bottom: 0;
+      top: 480px;
+    }
+
+    .contacts-imform {
+      display: flex;
+      flex-direction: column;
+    }
+
+    footer {
+      width: 1024px;
+    }
+
+    .librarycard-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .find-card {
+      margin-bottom: 21px;
+    }
+
+    .get-a-card {
+    
+    }
   }
