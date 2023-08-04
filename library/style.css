@@ -933,13 +933,17 @@ h1 {
     }
 
     .menu {
-      display: flex;
       flex-direction: column;
-      
+
     }
 
     .coffee-tea {
-      
+      align-self: first baseline;
+      margin-bottom: 40px;
+    }
+
+    .desserts-cakes {
+      align-self: last baseline;
     }
 
     .librarycard {
@@ -966,7 +970,8 @@ h1 {
     }
 
     footer {
-      width: 1024px;
+      width: 100%;
+      height: 250px;
     }
 
     .librarycard-box {
@@ -979,7 +984,66 @@ h1 {
       margin-bottom: 21px;
     }
 
-    .get-a-card {
-    
+    .p-get-a-card {
+      text-align: center
     }
+
+    .sign-up, .log-in {
+      float: none;
+    }
+
+    .h3-get-a-card {
+      text-align: center;
+    }
+    
+    .get-a-card {
+      text-align: center;
+
+    }
+
+    .conteiner-footer-2::after {
+      width: 984px;
+     } 
+
+     .header-container {
+      display: flex;
+      width: 100%;
+      height: 90px;
+      justify-content: space-between;
+      align-items: center;
+     }
+
+     .p-header {
+        margin-bottom: 13px;
+     }
+
+     .icon-profile {
+      margin-bottom: 29px;
+      display: block;
+      margin-left: 39%;
+     }
+
+     .menu-btn {
+      margin-right: 20px;
+     }
+
+     .burger-line1, .burger-line2, .burger-line3 {
+      color: #FFF;
+      width: 45px;
+      height: 2px;
+      background-color: #FFF;
+      margin: 7.4px 0;
+      transition: 0.3s;
+     }
+
+     .change .burger-line1 {
+      transform: rotate(-45deg) ;
+     }
+      
+     .change .burger-line3 {
+      transform: rotate(45deg) translate(-9px, -9px);
+     }
+      
+     .change .burger-line2 {opacity: 0;}
+
   }
