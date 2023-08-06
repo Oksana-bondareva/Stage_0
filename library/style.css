@@ -202,13 +202,17 @@ h1 {
     cursor: pointer;
    }
 
-   .pagination3 {
+   .pagination3, .pagination4, .pagination5 {
     width: 16px;
     height: 16px;
     background-color: #0C0C0E;
     border: 1px solid #0C0C0E;
     border-radius: 50%;
     cursor: pointer;
+   }
+
+   .pagination4, .pagination5 {
+    display: none;
    }
 
    .block-pagination {
@@ -890,6 +894,10 @@ h1 {
     transition: 2s;
   }
 
+  .carret-left, .carret-right {
+    display: none;
+  }
+
   @media (max-width: 1024px) {
     body {
       width: 100%;
@@ -900,6 +908,10 @@ h1 {
       display: none;
     }
 
+    .about {
+      height: 862px;
+    }
+
     .p-about {
       width: 95%;
     }
@@ -907,6 +919,30 @@ h1 {
     .img-slaider2, .img-slaider3 {
       display: none;
     }
+
+    .pagination-container {
+      margin-top: 25px;
+    }
+
+    .carret-left, .carret-right {
+      display: inline-block;
+      align-self: center;
+    }
+
+    .carret-left {
+      height: 24px;
+      width: 24px;
+    }
+
+    .carret-right {
+      height: 57px;
+      width: 57px;
+      margin-top: 4px;
+    }
+
+    .pagination4, .pagination5 {
+      display: block;
+     }
 
     .favorites {
       height: 2629px;;
@@ -934,7 +970,6 @@ h1 {
 
     .menu {
       flex-direction: column;
-
     }
 
     .coffee-tea {
@@ -944,10 +979,11 @@ h1 {
 
     .desserts-cakes {
       align-self: last baseline;
+      margin-bottom: 40px;
     }
 
     .librarycard {
-      height: 857px;
+      height: 897px;
     }
 
     .contacts {
@@ -959,8 +995,7 @@ h1 {
     .img-map {
       display: block;
       position: absolute;
-      left: 164px;
-      bottom: 0;
+      left: 4.6%; bottom: 0; right: 0;
       top: 480px;
     }
 
@@ -978,6 +1013,7 @@ h1 {
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 727px;
     }
 
     .find-card {
@@ -988,8 +1024,16 @@ h1 {
       text-align: center
     }
 
+    .h3-contacts-tel {
+      margin-bottom: 20px;;
+    }
+
     .sign-up, .log-in {
       float: none;
+    }
+
+    .log-in {
+      margin-left: 20px;
     }
 
     .h3-get-a-card {
@@ -997,8 +1041,8 @@ h1 {
     }
     
     .get-a-card {
+      height: 284px;
       text-align: center;
-
     }
 
     .conteiner-footer-2::after {
@@ -1045,5 +1089,5 @@ h1 {
      }
       
      .change .burger-line2 {opacity: 0;}
-
+     
   }
