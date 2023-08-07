@@ -239,7 +239,6 @@ h1 {
 
   .radio-button {
     display: inline-flex;
-    width: 720px;
     height: 24px;
     margin-left: 20px;
     margin-bottom: 40px;
@@ -937,7 +936,7 @@ h1 {
     .carret-right {
       height: 57px;
       width: 57px;
-      margin-top: 4px;
+      margin-top: 15px;
     }
 
     .pagination4, .pagination5 {
@@ -995,7 +994,7 @@ h1 {
     .img-map {
       display: block;
       position: absolute;
-      left: 4.6%; bottom: 0; right: 0;
+      left: 3%; bottom: 0; right: 0;
       top: 480px;
     }
 
@@ -1032,8 +1031,9 @@ h1 {
       float: none;
     }
 
-    .log-in {
+    .sign-up {
       margin-left: 20px;
+      margin-right: 20px;
     }
 
     .h3-get-a-card {
@@ -1046,7 +1046,7 @@ h1 {
     }
 
     .conteiner-footer-2::after {
-      width: 984px;
+      width: 95%;
      } 
 
      .header-container {
@@ -1080,14 +1080,107 @@ h1 {
       transition: 0.3s;
      }
 
-     .change .burger-line1 {
-      transform: rotate(-45deg) ;
+     .open .burger-line1 {
+      transform: rotate(-45deg);
+      margin-top: 20px;
      }
       
-     .change .burger-line3 {
-      transform: rotate(45deg) translate(-9px, -9px);
+     .open .burger-line3 {
+      transform: rotate(45deg) translate(-13px, -15px);
+      margin-top: 10px;
      }
       
-     .change .burger-line2 {opacity: 0;}
+     .open .burger-line2 {opacity: 0;}
      
+     .nav-menu {
+      display: flex;
+      width: 332px;
+      height: 490px;
+      position: absolute;
+	    top: 60px;
+      right: 0;
+      flex-direction: column;
+	    transform: translateX(100%);
+	    transition: transform 0.5s; 
+      overflow-x: hidden;
+      background: #000;
+      z-index: 9;
+     }
+
+     .nav-menu.open {
+      transform: translateX(0);
+    }
+
+    .ul-menu {
+      flex-direction: column;
+      margin-left: 108px;
+      margin-right: 115px;
+      margin-top: 20px;
+      align-items: center;
+    }
+
   }
+
+  @media (max-width: 768px) {
+    .icon-profile {
+      margin-right: 5px;
+    }
+
+    .p-about {
+      width: 95%;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .p-coffeshop {
+      width: 728px;
+      letter-spacing: 1.93px;
+    }
+
+    .librarycard {
+      height: 857px;
+    }
+
+    .librarycard-box {
+      width: 600px;
+      margin-left: 77px;
+    }
+
+    .p-get-a-card {
+      width: 600px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .get-a-card {
+      margin-left: 5.5%;
+    }
+
+    .rss {
+      margin-left: 100px;
+    }
+  }
+
+  @media (max-width: 745px) {
+    .radio-button {
+      flex-wrap: wrap;
+    }
+
+    .p-coffeshop {
+      width: 95%;
+    }
+
+    .img-map {
+      width: 95%;
+    }
+
+    .get-a-card {
+      margin-left: 5.2%;
+    }
+
+    .librarycard-box {
+      margin-left: 10%;
+    }
+
+  }
+ 
