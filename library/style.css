@@ -1089,6 +1089,7 @@ h1 {
       
      .open .burger-line3 {
       transform: rotate(45deg) translate(-13px, -15px);
+
       margin-top: 9px;
      }
       
@@ -1112,7 +1113,7 @@ h1 {
       display: flex;
       transform: translateX(0);
     }
-    
+
     .ul-menu {
       flex-direction: column;
       margin-left: 108px;
@@ -1192,7 +1193,7 @@ h1 {
     .pagination1, .pagination2, .pagination3, .pagination4, .pagination5 {
       margin: 0px 5px;
     }
-
+    
   }
 
   @media (max-width: 745px) {
@@ -1241,4 +1242,6 @@ h1 {
 
   }
  
+  }
+
  
