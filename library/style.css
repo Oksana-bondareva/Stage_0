@@ -622,6 +622,7 @@ h1 {
   .get-a-card {
     height: 614px;
     margin-right: 20px;
+    text-align: right;
   }
 
   .find-card {
@@ -757,7 +758,6 @@ h1 {
     line-height: normal;
     letter-spacing: 1px;
     display: inline-block;
-    float: right;
     cursor: pointer;
   }
 
@@ -902,6 +902,7 @@ h1 {
     body {
       width: 100%;
       height: auto;
+      overflow-x: hidden;
     }
 
     .nav-menu {
@@ -948,6 +949,15 @@ h1 {
       height: 2629px;;
     }
 
+    .radio-button {
+      width: 700px;
+      justify-content: space-between;
+    }
+
+    .radio-button-text {
+      margin-right: auto;
+    }
+    
     .books-winter, .books-spring, .books-summer, .books-autumn {
       display: flex;
       justify-content: center;
@@ -1028,15 +1038,6 @@ h1 {
       margin-bottom: 20px;;
     }
 
-    .sign-up, .log-in {
-      float: none;
-    }
-
-    .sign-up {
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
     .h3-get-a-card {
       text-align: center;
     }
@@ -1065,7 +1066,7 @@ h1 {
      .icon-profile {
       margin-bottom: 29px;
       display: block;
-      margin-left: 39%;
+      margin-left: 38%;
      }
 
      .menu-btn {
@@ -1083,32 +1084,33 @@ h1 {
 
      .open .burger-line1 {
       transform: rotate(-45deg);
-      margin-top: 20px;
+      margin-top: 24px;
      }
       
      .open .burger-line3 {
       transform: rotate(45deg) translate(-13px, -15px);
-      margin-top: 10px;
+
+      margin-top: 9px;
      }
       
      .open .burger-line2 {opacity: 0;}
-     
+
      .nav-menu {
       display: flex;
       width: 332px;
       height: 490px;
-      position: absolute;
+      position: fixed;
 	    top: 60px;
       right: 0;
       flex-direction: column;
-	    transform: translateX(100%);
-	    transition: transform 0.5s; 
-      overflow-x: hidden;
+	    transform: translateX(332px);
+	    transition: 0.5s; 
       background: #000;
       z-index: 9;
      }
 
      .nav-menu.open {
+      display: flex;
       transform: translateX(0);
     }
 
@@ -1144,7 +1146,7 @@ h1 {
 
     .librarycard-box {
       width: 600px;
-      margin-left: 77px;
+      margin-left: 75px;
     }
 
     .p-get-a-card {
@@ -1154,17 +1156,49 @@ h1 {
     }
 
     .get-a-card {
-      margin-left: 5.5%;
+      margin-left: 6.5%;
     }
 
     .rss {
       margin-left: 100px;
     }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .carret-left, .carret-right {
+      display: inline-block;
+      align-self: center;
+    }
+
+    .carret-left {
+      height: 12px;
+      width: 12px;
+      margin-left: 55px;
+      margin-top: 38px;
+    }
+
+    .carret-right {
+      height: 26px;
+      width: 26px;
+      margin-top: 40px;
+      margin-right: 50px;
+    }
+
+    .img-slaider1, .img-slaider2, .img-slaider3 {
+      margin-left: 12px;
+    }
+
+    .pagination1, .pagination2, .pagination3, .pagination4, .pagination5 {
+      margin: 0px 5px;
+    }
+    
   }
 
   @media (max-width: 745px) {
     .radio-button {
-      flex-wrap: wrap;
+      width: 90%;
     }
 
     .p-coffeshop {
@@ -1183,5 +1217,31 @@ h1 {
       margin-left: 10%;
     }
 
+    .burger-line1, .burger-line2, .burger-line3 {
+      width: 30px;
+    }
+
+    .librarycard-box {
+      width: 80%;
+      text-align: center;
+    }
+
+    .form-card {
+      width: 85%;
+      margin-left: 35px;
+    }
+
+    .form-text {
+      width: 85%;
+    }
+
+    .form-conteiner {
+      width: 85%;
+      margin-right: 0px;
+    }
+
   }
+ 
+  }
+
  
