@@ -922,7 +922,7 @@ h1 {
     }
 
     .pagination-container {
-      margin-top: 25px;
+      margin-top: 40px;
     }
 
     .carret-left, .carret-right {
@@ -1066,7 +1066,7 @@ h1 {
      .icon-profile {
       margin-bottom: 29px;
       display: block;
-      margin-left: 38%;
+      margin-left: 37%;
      }
 
      .menu-btn {
@@ -1105,7 +1105,7 @@ h1 {
       flex-direction: column;
 	    transform: translateX(332px);
 	    transition: 0.5s; 
-      background: #000;
+      background: #0C0C0E;
       z-index: 9;
      }
 
@@ -1242,6 +1242,5 @@ h1 {
 
   }
  
-  }
 
  
