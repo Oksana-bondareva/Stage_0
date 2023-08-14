@@ -1114,6 +1114,11 @@ h1 {
       transform: translateX(0);
     }
 
+    .nav-menu.open:hover {
+      transform: translateX(332px);
+	    transition: 0.5s; 
+    }
+
     .ul-menu {
       flex-direction: column;
       margin-left: 108px;
