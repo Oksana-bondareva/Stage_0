@@ -48,27 +48,31 @@
             <h2 class="h2-section">About</h2>
             <p class="p-about">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
             <div class="slaider">
-                <img class="carret-left" src="img/Vector.svg" alt="Carret left">
-                <img class="img-slaider1" src="img/image1.png" alt="women in library">
-                <img class="img-slaider2" src="img/image2.png" alt="busts">
-                <img class="img-slaider3" src="img/image3.png" alt="books in library">
-                <img class="carret-right" src="img/Carret_Right.svg" alt="Carret right">
+               <img class="carret-left" onclick="plusSlides(-1)" src="img/Vector.svg" alt="Carret left">
+               <div class="img-slaider-conteiner">
+                <img class="img-slaider1 img-slaider" src="img/image1.png" alt="women in library">
+                <img class="img-slaider2 img-slaider" src="img/image2.png" alt="busts">
+                <img class="img-slaider3 img-slaider" src="img/image3.png" alt="books in library">
+                <img class="img-slaider4 img-slaider" src="img/image4.png" alt="books">
+                <img class="img-slaider5 img-slaider" src="img/image5.png" alt="library building">
+              </div>
+              <img class="carret-right" onclick="plusSlides(1)" src="img/Carret_Right.svg" alt="Carret right">
             </div>
            <div class="pagination-container">
             <div class="block-pagination">
-              <button class="pagination1"></button> 
+              <button class="pagination1 pagination activ-pagination" onclick="currentSlide(1)"></button> 
             </div>
             <div class="block-pagination">
-              <button class="pagination2"></button>
+              <button class="pagination2 pagination" onclick="currentSlide(2)"></button>
             </div>
             <div class="block-pagination">
-              <button class="pagination3"></button>
+              <button class="pagination3 pagination" onclick="currentSlide(3)"></button>
             </div>
             <div class="block-pagination">
-              <button class="pagination4"></button>
+              <button class="pagination4 pagination" onclick="currentSlide(4)"></button>
             </div>
             <div class="block-pagination">
-              <button class="pagination5"></button>
+              <button class="pagination5 pagination" onclick="currentSlide(5)"></button>
             </div>
           </div>
         </section>

@@ -8,7 +8,34 @@ function burgerMenu(icon) {
     icon.classList.toggle('open');
 }
 
+if (document.body.clientWidth <= 1024) {
+let slideIndex = 1;
+showSlides(slideIndex);
 
-
-console.log(' 50/50 \nВёрстка соответствует макету. Ширина экрана 768px +26 \nНи на одном из разрешений до 640px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +12 \nНа ширине экрана 768рх реализовано адаптивное меню +12 ' )
-
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("img-slaider");
+    let dots = document.getElementsByClassName("pagination");
+    if (n > slides.length) {slideIndex = slides.length}    
+    if (n < 1) {slideIndex = 1}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" activ-pagination", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " activ-pagination";
+  }
+}
+  else {
+    
+};

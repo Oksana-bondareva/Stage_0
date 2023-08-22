@@ -168,14 +168,20 @@ h1 {
     margin-bottom: 20px;
   }
 
-   .slaider {
+   .img-slaider-conteiner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-left: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
    }
 
-   .img-slaider1, .img-slaider2, .img-slaider3 {
+   .img-slaider1, .img-slaider2, .img-slaider3, .img-slaider4, .img-slaider5 {
     width: 450px;
     height: 560px;
+    transition: 1s;
+    margin-right: 25px;
    }
 
    .pagination-container{
@@ -188,9 +194,9 @@ h1 {
    .pagination1 {
     width: 16px;
     height: 16px;
-    background-color: #BB945F;
+    background-color: #000000;
     border-radius: 50%;
-    border: 1px solid #BB945F;
+    border: 1px solid #000000;
     cursor: pointer;
    }
 
@@ -214,6 +220,11 @@ h1 {
 
    .pagination4, .pagination5 {
     display: none;
+   }
+
+   .activ-pagination {
+    background-color: #BB945F;
+    border: 1px solid #BB945F;
    }
 
    .block-pagination {
@@ -918,8 +929,18 @@ h1 {
       width: 95%;
     }
 
-    .img-slaider2, .img-slaider3 {
-      display: none;
+    .slaider {
+      display: flex;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .img-slaider-conteiner {
+      margin-left: 35px;
+    }
+
+    .img-slaider {
+      margin-right: 40px;
     }
 
     .pagination-container {
@@ -927,8 +948,9 @@ h1 {
     }
 
     .carret-left, .carret-right {
-      display: inline-block;
+      display: block;
       align-self: center;
+      position: relative;
     }
 
     .carret-left {
@@ -939,7 +961,6 @@ h1 {
     .carret-right {
       height: 57px;
       width: 57px;
-      margin-top: 15px;
     }
 
     .pagination4, .pagination5 {
