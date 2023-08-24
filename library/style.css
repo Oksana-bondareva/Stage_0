@@ -168,17 +168,20 @@ h1 {
     margin-bottom: 20px;
   }
 
+   .slaider {
+    overflow: hidden;
+   }
+
    .img-slaider-conteiner {
     width: 100%;
-    overflow: hidden;
     position: relative;
     padding-left: 20px;
     display: flex;
     justify-content: space-between;
    }
 
-   .img-slaider1, .img-slaider2, .img-slaider3, .img-slaider4, .img-slaider5 {
-    width: 450px;
+   .img-slaider {
+    min-width: 450px;
     height: 560px;
     transition: 1s;
     margin-right: 25px;
@@ -224,6 +227,10 @@ h1 {
 
    .activ-pagination {
     background-color: #BB945F;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
     border: 1px solid #BB945F;
    }
 
