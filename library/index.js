@@ -95,3 +95,53 @@ if (document.body.clientWidth > 1024) {
         dots[slideIndex-1].className += " activ-pagination";
       } 
 };
+
+let radioWinter = document.getElementById('winter');
+let radioSpring = document.getElementById('spring');
+let radioSummer = document.getElementById('summer');
+let radioAutumn = document.getElementById('autumn');
+let booksWinter = document.querySelector('.books-winter');
+let booksSpring = document.querySelector('.books-spring');
+let booksSummer = document.querySelector('.books-summer');
+let booksAutumn = document.querySelector('.books-autumn');
+
+radioWinter.addEventListener('click', function(){
+	booksWinter.classList.add('book-visible');
+  booksSpring.classList.remove('book-visible');
+  booksSummer.classList.remove('book-visible');
+  booksAutumn.classList.remove('book-visible');
+  booksSpring.classList.add('books-hidden');
+  booksSummer.classList.add('books-hidden');
+  booksAutumn.classList.add('books-hidden');
+});
+
+radioSpring.addEventListener('click', function(){
+	booksSpring.classList.add('book-visible');
+  booksWinter.classList.remove('book-visible');
+  booksSummer.classList.remove('book-visible');
+  booksAutumn.classList.remove('book-visible');
+  booksWinter.classList.add('books-hidden');
+  booksSummer.classList.add('books-hidden');
+  booksAutumn.classList.add('books-hidden');
+});
+
+radioSummer.addEventListener('click', function(){
+	booksSummer.classList.add('book-visible');
+  booksSpring.classList.remove('book-visible');
+  booksWinter.classList.remove('book-visible');
+  booksAutumn.classList.remove('book-visible');
+  booksWinter.classList.add('books-hidden');
+  booksSpring.classList.add('books-hidden');
+  booksAutumn.classList.add('books-hidden');
+});
+
+radioAutumn.addEventListener('click', function(){
+	booksAutumn.classList.add('book-visible');
+  booksSpring.classList.remove('book-visible');
+  booksSummer.classList.remove('book-visible');
+  booksWinter.classList.remove('book-visible');
+  booksWinter.classList.add('books-hidden');
+  booksSpring.classList.add('books-hidden');
+  booksSummer.classList.add('books-hidden');
+});
+

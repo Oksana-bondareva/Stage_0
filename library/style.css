@@ -312,8 +312,39 @@ h1 {
     margin-right: 20px;
   }
 
-  .books-spring, .books-summer, .books-autumn {
-    display: none;
+  .books-winter {
+    z-index: 1;
+  }
+ 
+  .books-spring {
+    z-index: 2;
+    position: absolute;
+    margin-top: 250px;
+    margin-right: 60px;
+  }
+
+  .books-summer {
+    z-index: 3;
+    position: absolute;
+    margin-top: 250px;
+    margin-right: 60px;
+  }
+
+  .books-autumn {
+    z-index: 4;
+    position: absolute;
+    margin-top: 250px;
+    margin-right: 60px;
+  }
+
+  .books-hidden {
+    opacity: 0; 
+    transition: opacity 2s linear;
+  }
+
+  .book-visible {
+    opacity: 1;
+    transition: opacity 2s linear 0.8s;
   }
 
   .book {
@@ -917,6 +948,49 @@ h1 {
     display: none;
   }
 
+  .dropMenu-no-aut {
+    width: 80px;
+    height: 115px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .dropMenu-h2 {
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; 
+  }
+
+  .dropMenu-h2::after {
+    display: block;
+    position: relative;
+    text-align: center;
+    content: '';
+    height: 1px; 
+    width: 50px;
+    background: #0C0C0E;
+    margin: 20px auto 0;
+   } 
+
+  .login, .register {
+   color: #000;
+   text-align: center;
+   font-family: Inter;
+   font-size: 15px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 20px;
+  }
+
   @media (max-width: 1024px) {
     body {
       width: 100%;
@@ -981,6 +1055,10 @@ h1 {
     .radio-button {
       width: 700px;
       justify-content: space-between;
+      background-color: #8E8E8E;
+      position: sticky;
+      top: 0px;
+      z-index: 5;
     }
 
     .radio-button-text {
@@ -990,10 +1068,7 @@ h1 {
     .books-winter, .books-spring, .books-summer, .books-autumn {
       display: flex;
       justify-content: center;
-    }
-
-    .books-spring, .books-summer, .books-autumn {
-      display: none;
+      margin-right: 40px;
     }
 
     .coffeshop {
