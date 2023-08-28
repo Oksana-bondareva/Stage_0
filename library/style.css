@@ -948,40 +948,47 @@ h1 {
     display: none;
   }
 
-  .dropMenu-no-aut {
+  .modal1, .modal2 {
+    z-index: 10;
     width: 80px;
     height: 115px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    background: #FFF;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    position: fixed;
+    top: 55px;
+    bottom: 0;
+    right: 60px;
+    display: none;
   }
 
-  .dropMenu-h2 {
+  .dropmenu-h2 {
     color: #000;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
     line-height: 20px; 
+    margin-top: 5px;
+    text-align: center;
   }
 
-  .dropMenu-h2::after {
+  .dropmenu-h2::after {
     display: block;
-    position: relative;
+    position: absolute;
     text-align: center;
     content: '';
     height: 1px; 
-    width: 50px;
-    background: #0C0C0E;
-    margin: 20px auto 0;
+    width: 40px;
+    background: #BB945F;
+    margin: 0px 20px 0px;
    } 
 
-  .login, .register {
+  .login, .register, .my-profile, .logout {
    color: #000;
    text-align: center;
    font-family: Inter;
@@ -989,6 +996,23 @@ h1 {
    font-style: normal;
    font-weight: 400;
    line-height: 20px;
+   cursor: pointer;
+  }
+
+  .login, .my-profile {
+    margin-top: 15px;
+  }
+
+  .register, .logout {
+    margin-top: 10px;
+  }
+
+  .open-modal1 {
+    display: block;
+  }
+
+  .close-modal1 {
+    display: none;
   }
 
   @media (max-width: 1024px) {
@@ -1228,6 +1252,10 @@ h1 {
       margin-right: 115px;
       margin-top: 20px;
       align-items: center;
+    }
+
+    .modal1, .modal2 {
+      right: 105px;
     }
 
   }

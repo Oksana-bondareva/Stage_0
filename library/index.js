@@ -1,12 +1,30 @@
 let menuBtn = document.querySelector('.menu-btn');
 let menuNav = document.querySelector('.nav-menu');
+
 menuBtn.addEventListener('click', function(){
 	menuNav.classList.toggle('open');
 })
 
 function burgerMenu(icon) {
-    icon.classList.toggle('open');
+  icon.classList.toggle('open');
 }
+
+menuNav.addEventListener('click', e => {
+  const target = e.target 
+  if (!target.closest('.menu-btn')) {
+    menuNav.classList.remove('open');
+    menuBtn.classList.remove('open');
+  }
+});
+
+window.addEventListener('click', e => {
+  const target = e.target 
+  if (!target.closest('.menu-btn') && !target.closest('.nav-menu')) {
+    menuNav.classList.remove('open');
+    menuBtn.classList.remove('open');
+  }
+});
+
 
 if (document.body.clientWidth > 1024) {
   let position = 0;
@@ -144,4 +162,24 @@ radioAutumn.addEventListener('click', function(){
   booksSpring.classList.add('books-hidden');
   booksSummer.classList.add('books-hidden');
 });
+
+let iconProfile = document.querySelector('.icon-profile');
+let modal1 = document.querySelector('.modal1');
+
+iconProfile.addEventListener('click', function(){
+	modal1.classList.toggle('open-modal1');
+  menuNav.classList.remove('open');
+});
+
+window.addEventListener('click', e => {
+  const target = e.target 
+  if (!target.closest('.modal1') && !target.closest('.icon-profile')) {
+    modal1.classList.remove('open-modal1'); 
+  }
+});
+
+  
+
+
+
 
