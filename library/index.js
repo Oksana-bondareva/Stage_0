@@ -178,6 +178,30 @@ window.addEventListener('click', e => {
   }
 });
 
+let register = document.querySelector('.register');
+let modal3 = document.querySelector('.modal3');
+let closeRegister = document.querySelector('.close-modal-register');
+let modalRegister = document.querySelector('.modal-register');
+
+register.addEventListener('click', function(){
+	modal3.classList.add('open-modal3');
+  modal1.classList.remove('open-modal1');
+  modalRegister.classList.add('modal-register-open');
+});
+
+closeRegister.addEventListener('click', function(){
+	modal3.classList.remove('open-modal3');
+  modalRegister.classList.remove('modal-register-open');
+});
+
+window.addEventListener('click', e => {
+  const target = e.target 
+  if (!target.closest('.modal1') && !target.closest('.modal3')) {
+    modal3.classList.remove('open-modal3'); 
+    modalRegister.classList.remove('modal-register-open');
+  }
+});
+
   
 
 

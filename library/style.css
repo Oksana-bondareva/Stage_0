@@ -1015,6 +1015,134 @@ h1 {
     display: none;
   }
 
+  .modal3 {
+    width: 250px;
+    height: 382px;
+    background: #FFF;
+    display: flex;
+    position: relative;
+    display: none;
+  }
+
+  .close-modal-register {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    margin-top: 15px;
+    position: absolute;
+    margin-left: 220px;
+    cursor: pointer;
+  }
+
+  .form-register {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .form-register-name {
+    text-align: center;
+    font-family: Forum;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .label-register {
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.3px;
+  }
+
+  .form-register-input {
+    width: 200px;
+    height: 20px;
+    flex-shrink: 0;
+    border: 1px solid #BB945F;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form-register-submit {
+    width: 75px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-left: 25px;
+  }
+
+  .p-form-register-have-account {
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .href-form-register-have-account {
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+  }
+
+  .form-register-have-account {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+  }
+
+ .open-modal3 {
+  display: block;
+  z-index: 10;
+  position: fixed;
+  left: 35%;
+  top: 20%;
+  overflow: auto;
+ }
+
+ .modal-register-open {
+  background: #000;
+  height: 100%;
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+ }
+
+ .close-modal3 {
+  display: none;
+ }
+
   @media (max-width: 1024px) {
     body {
       width: 100%;
