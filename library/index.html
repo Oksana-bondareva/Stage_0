@@ -390,22 +390,53 @@
      <form class="form-register-conteiner">
       <div class="form-register">
        <h2 class="form-register-name">Register</h2>
-       <label class="first-name-register label-register" for="first-name"><b>First name</b></label>
-       <input required class="form-register-input" type="text" name="first-name-register-input">
-       <label class="last-name-register label-register" for="last-name"><b>Last name</b></label>
-       <input required class="form-register-input" type="text" name="last-name-register-input">
-       <label class="e-mail-register label-register" for="e-mail-name"><b>E-mail</b></label>
-       <input required class="form-register-input" type="email" name="e-mail-register-input">
-       <label class="password-register label-register" for="first-name"><b>Password</b></label>
-       <input required minlength="8" class="form-register-input" type="password" name="password-register-input">
-     </div>
-       <button class="form-register-submit">Sign Up</button>
+       <label class="first-name-register label-register" for="first-name"><b>First name</b>
+         <input required class="form-register-input first-name-register-input" type="text" name="first-name-register-input">
+      </label>
+       <label class="last-name-register label-register" for="last-name"><b>Last name</b>
+         <input required class="form-register-input last-name-register-input" type="text" name="last-name-register-input">
+      </label>
+       <label class="e-mail-register label-register" for="e-mail-name"><b>E-mail</b>
+         <input required class="form-register-input" type="email" name="e-mail-register-input">
+      </label>
+       <label class="password-register label-register" for="password"><b>Password</b>
+         <input required minlength="8" class="form-register-input" type="current-password" name="password-register-input">
+      </label>
+      </div>
+       <button type="submit" class="form-register-submit">Sign Up</button>
      </form>
      <div class="form-register-have-account">
       <p class="p-form-register-have-account">Already have an account?</p>
       <span class="href-form-register-have-account">Login</span>
      </div>
     </div>
+  </div>
+  <div class="modal-login">
+    <div class="modal4">
+     <div class="close-modal-login">
+      <img src="/library/img/close_btn.svg" alt="Close icon">
+     </div>
+     <form class="form-login-conteiner">
+      <div class="form-login">
+       <h2 class="form-login-name">Login</h2>
+       <label class="e-mail-login label-login" for="e-mail-name"><b>E-mail</b>
+        <input required class="form-login-input" type="email" name="e-mail-login-input">
+      </label>
+       <label class="password-login label-login" for="password"><b>Password</b>
+        <input required minlength="8" class="form-login-input" type="current-password" name="password-register-input">
+      </label>
+      </div>
+       <button type="submit" class="form-login-submit">Log in</button>
+     </form>
+     <div class="form-register-have-account">
+      <p class="p-form-login-have-account">Don’t have an account?</p>
+      <span class="href-form-login-have-account">Register</span>
+     </div>
+    </div>
+  </div>
+  <div class="icon-profile-register">
+    <img src="img/Subtract.svg" alt="icon profile">
+    <div class="icon-name"></div>
   </div>
   <script src="index.js"></script>
 </body>

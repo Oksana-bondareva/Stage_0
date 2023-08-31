@@ -1024,7 +1024,16 @@ h1 {
     display: none;
   }
 
-  .close-modal-register {
+  .modal4 {
+    width: 250px;
+    height: 262px;
+    background: #FFF;
+    display: flex;
+    position: relative;
+    display: none;
+  }
+
+  .close-modal-register, .close-modal-login {
     width: 15px;
     height: 15px;
     flex-shrink: 0;
@@ -1034,12 +1043,12 @@ h1 {
     cursor: pointer;
   }
 
-  .form-register {
+  .form-register, .form-login {
     margin-right: 25px;
     margin-left: 25px;
   }
 
-  .form-register-name {
+  .form-register-name, .form-login-name {
     text-align: center;
     font-family: Forum;
     font-size: 20px;
@@ -1052,7 +1061,7 @@ h1 {
     padding-top: 20px;
   }
 
-  .label-register {
+  .label-register, .label-login {
     text-align: center;
     font-family: Inter;
     font-size: 15px;
@@ -1062,7 +1071,7 @@ h1 {
     letter-spacing: 0.3px;
   }
 
-  .form-register-input {
+  .form-register-input, .form-login-input {
     width: 200px;
     height: 20px;
     flex-shrink: 0;
@@ -1071,7 +1080,7 @@ h1 {
     margin-bottom: 10px;
   }
 
-  .form-register-submit {
+  .form-register-submit, .form-login-submit {
     width: 75px;
     height: 30px;
     flex-shrink: 0;
@@ -1089,7 +1098,7 @@ h1 {
     margin-left: 25px;
   }
 
-  .p-form-register-have-account {
+  .p-form-register-have-account, .p-form-login-have-account {
     text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
     font-family: Inter;
     font-size: 10px;
@@ -1100,7 +1109,7 @@ h1 {
     margin-bottom: 10px;
   }
 
-  .href-form-register-have-account {
+  .href-form-register-have-account, .href-form-login-have-account {
     color: #0C0C0E;
     text-align: center;
     font-family: Inter;
@@ -1112,23 +1121,23 @@ h1 {
     text-decoration-line: underline;
   }
 
-  .form-register-have-account {
+  .form-register-have-account, .form-login-have-account {
     display: flex;
     position: absolute;
     bottom: 10px;
     left: 25px;
   }
 
- .open-modal3 {
+ .open-modal3, .open-modal4 {
   display: block;
   z-index: 10;
   position: fixed;
-  left: 35%;
+  left: 40%;
   top: 20%;
   overflow: auto;
  }
 
- .modal-register-open {
+ .modal-register-open, .modal-login-open {
   background: #000;
   height: 100%;
   opacity: 0.9;
@@ -1139,8 +1148,35 @@ h1 {
   left: 0;
  }
 
- .close-modal3 {
+ .close-modal3, .close-modal4 {
   display: none;
+ }
+
+ .href-form-register-have-account, .href-form-login-have-account {
+  cursor: pointer;
+ }
+
+ .icon-profile-register {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  fill: #FFF;
+  position: absolute;
+  right: 4.5%;
+  top: 4%;
+  color: #BB945F;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  display: none;
+ }
+
+ .icon-name {
+  position: absolute;
+  right: 15%;
+  top: 10%;
  }
 
   @media (max-width: 1024px) {
@@ -1385,6 +1421,15 @@ h1 {
     .modal1, .modal2 {
       right: 105px;
     }
+
+    .open-modal3, .open-modal4 {
+      left: 35%;
+     }
+
+     .icon-profile-register {
+      right: 14%;
+      top: 5%;
+     }
 
   }
 

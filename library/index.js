@@ -182,6 +182,9 @@ let register = document.querySelector('.register');
 let modal3 = document.querySelector('.modal3');
 let closeRegister = document.querySelector('.close-modal-register');
 let modalRegister = document.querySelector('.modal-register');
+let signUp = document.querySelector('.sign-up');
+let hrefRegister = document.querySelector('.href-form-register-have-account');
+let hrefLogin = document.querySelector('.href-form-login-have-account');
 
 register.addEventListener('click', function(){
 	modal3.classList.add('open-modal3');
@@ -196,13 +199,68 @@ closeRegister.addEventListener('click', function(){
 
 window.addEventListener('click', e => {
   const target = e.target 
-  if (!target.closest('.modal1') && !target.closest('.modal3')) {
+  if (!target.closest('.modal1') && !target.closest('.modal3') && !target.closest('.sign-up')) {
     modal3.classList.remove('open-modal3'); 
     modalRegister.classList.remove('modal-register-open');
   }
 });
 
-  
+signUp.addEventListener('click', function(){
+	modal3.classList.add('open-modal3');
+  modalRegister.classList.add('modal-register-open');
+});
+
+let logIn = document.querySelector('.login');
+let modal4 = document.querySelector('.modal4');
+let closeLogin = document.querySelector('.close-modal-login');
+let modalLogin = document.querySelector('.modal-login');
+let logInButton = document.querySelector('.log-in');
+
+logIn.addEventListener('click', function(){
+	modal4.classList.add('open-modal4');
+  modal1.classList.remove('open-modal1');
+  modalLogin.classList.add('modal-login-open');
+});
+
+closeLogin.addEventListener('click', function(){
+	modal4.classList.remove('open-modal4');
+  modalLogin.classList.remove('modal-login-open');
+});
+
+window.addEventListener('click', e => {
+  const target = e.target 
+  if (!target.closest('.modal1') && !target.closest('.modal4') && !target.closest('.log-in')) {
+    modal4.classList.remove('open-modal4'); 
+    modalLogin.classList.remove('modal-login-open');
+  }
+});
+
+logInButton.addEventListener('click', function(){
+	modal4.classList.add('open-modal4');
+  modalLogin.classList.add('modal-login-open');
+});
+
+let formRegister = document.querySelector('.form-register');  
+let formFiledRegister = document.querySelectorAll('.form-register-input');  
+let formRegisterSubmit = formRegister.querySelector('[type="submit"]');
+let firstName = localStorage.getItem('first-name-register-input'); 
+let lastName = localStorage.getItem('last-name-register-input'); 
+let iconProfileRegister = document.querySelector('.icon-profile-register');
+let iconName = document.querySelector('.icon-name');
+
+for (let i = 0; i < formFiledRegister.length; i++) {
+  formFiledRegister[i].addEventListener('change', changeHandler)
+};
+
+function changeHandler() {
+  localStorage.setItem(this.name, this.value);
+};
+
+
+
+
+
+
 
 
 
