@@ -340,11 +340,13 @@ h1 {
   .books-hidden {
     opacity: 0; 
     transition: opacity 2s linear;
+    z-index: 1;
   }
 
   .book-visible {
     opacity: 1;
     transition: opacity 2s linear 0.8s;
+    z-index: 10;
   }
 
   .book {
@@ -435,11 +437,11 @@ h1 {
     cursor: pointer;
   }
 
-  .buy:hover {
+ .buy:hover {
     width: 75px;
     height: 30px;
     border-radius: 2px;
-    border: 1px solid #BB945F;
+    border: 1px solid #BB945F; 
     background: #BB945F;
     transition: 2s;
   }
@@ -1007,11 +1009,11 @@ h1 {
     margin-top: 10px;
   }
 
-  .open-modal1 {
+  .open-modal1, .open-modal2 {
     display: block;
   }
 
-  .close-modal1 {
+  .close-modal1, .close-modal2 {
     display: none;
   }
 
@@ -1162,7 +1164,7 @@ h1 {
   flex-shrink: 0;
   fill: #FFF;
   position: absolute;
-  right: 4.5%;
+  right: 4%;
   top: 4%;
   color: #BB945F;
   font-family: Inter;
@@ -1175,8 +1177,11 @@ h1 {
 
  .icon-name {
   position: absolute;
-  right: 15%;
-  top: 10%;
+  right: 11%;
+  top: 16%;
+  z-index: 5;
+  text-transform: uppercase;
+  cursor: pointer;
  }
 
   @media (max-width: 1024px) {

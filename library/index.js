@@ -165,6 +165,7 @@ radioAutumn.addEventListener('click', function(){
 
 let iconProfile = document.querySelector('.icon-profile');
 let modal1 = document.querySelector('.modal1');
+let modal2 = document.querySelector('.modal2');
 
 iconProfile.addEventListener('click', function(){
 	modal1.classList.toggle('open-modal1');
@@ -229,7 +230,7 @@ closeLogin.addEventListener('click', function(){
 
 window.addEventListener('click', e => {
   const target = e.target 
-  if (!target.closest('.modal1') && !target.closest('.modal4') && !target.closest('.log-in')) {
+  if (!target.closest('.modal1') && !target.closest('.modal4') && !target.closest('.log-in') && !target.closest('.buy')) {
     modal4.classList.remove('open-modal4'); 
     modalLogin.classList.remove('modal-login-open');
   }
@@ -240,22 +241,66 @@ logInButton.addEventListener('click', function(){
   modalLogin.classList.add('modal-login-open');
 });
 
+Array.from(document.querySelectorAll('.buy'), function(el){
+  el.onclick = function(){
+    modal4.classList.add('open-modal4');
+    modalLogin.classList.add('modal-login-open');
+  }
+})
+
 let formRegister = document.querySelector('.form-register');  
 let formFiledRegister = document.querySelectorAll('.form-register-input');  
 let formRegisterSubmit = formRegister.querySelector('[type="submit"]');
 let firstName = localStorage.getItem('first-name-register-input'); 
 let lastName = localStorage.getItem('last-name-register-input'); 
 let iconProfileRegister = document.querySelector('.icon-profile-register');
-let iconName = document.querySelector('.icon-name');
+let iconName = document.querySelector('.icon-name').textContent = firstName[0] + lastName[0];
+let iconNameTitle = document.querySelector('.icon-name').title = firstName + " " + lastName;
 
 for (let i = 0; i < formFiledRegister.length; i++) {
   formFiledRegister[i].addEventListener('change', changeHandler)
 };
 
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+const numberCard = Number(getRandomNumber(111111111, 999999999)).toString(16);
+
 function changeHandler() {
   localStorage.setItem(this.name, this.value);
+  localStorage.setItem('isAuth', true);
+  localStorage.setItem('number-card', numberCard);
 };
 
+let isAuth = localStorage.getItem('isAuth');
+
+if (isAuth === 'true') {
+  iconProfileRegister.style.display = "block";
+}
+else {
+  iconProfileRegister.style.display = "none";
+};
+
+iconProfileRegister.addEventListener('click', function(){
+	modal2.classList.toggle('open-modal2');
+  menuNav.classList.remove('open');
+});
+
+window.addEventListener('click', e => {
+  const target = e.target 
+  if (!target.closest('.modal2') && !target.closest('.icon-profile-register')) {
+    modal2.classList.remove('open-modal2'); 
+  }
+});
+
+let logOut = document.querySelector('.logout');
+
+logOut.addEventListener('click', function(){
+	modal2.classList.remove('open-modal2');
+  localStorage.setItem('isAuth', false);
+  location.reload();
+});
 
 
 
