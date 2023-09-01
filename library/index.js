@@ -262,16 +262,17 @@ for (let i = 0; i < formFiledRegister.length; i++) {
 };
 
 function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
-const numberCard = Number(getRandomNumber(111111111, 999999999)).toString(16);
+const numberCard = document.querySelector('.card-number-div').textContent = Number(getRandomNumber(1111111111, 9999999999)).toString(16);
 
 function changeHandler() {
   localStorage.setItem(this.name, this.value);
   localStorage.setItem('isAuth', true);
-  localStorage.setItem('number-card', numberCard);
 };
+
+let profileName = document.querySelector('.dropmenu-h2-profile').textContent = localStorage.getItem('number-card'); 
 
 let isAuth = localStorage.getItem('isAuth');
 
@@ -301,6 +302,32 @@ logOut.addEventListener('click', function(){
   localStorage.setItem('isAuth', false);
   location.reload();
 });
+
+let myProfile = document.querySelector('.my-profile');
+let modalMyProfile = document.querySelector('.modal5');
+let closeModal5 = document.querySelector('.close-modal-profile');
+let myProfileConteiner = document.querySelector('.modal-profile');
+
+myProfile.addEventListener('click', function(){
+	modalMyProfile.classList.add('open-modal5');
+  modal2.classList.remove('open-modal2');
+  myProfileConteiner.classList.add('modal-profile-open');
+});
+
+closeModal5.addEventListener('click', function(){
+	modalMyProfile.classList.remove('open-modal5');
+  myProfileConteiner.classList.remove('modal-profile-open');
+});
+
+window.addEventListener('click', e => {
+  const target = e.target 
+  if (!target.closest('.modal2') && !target.closest('.modal5')) {
+    modalMyProfile.classList.remove('open-modal5'); 
+    myProfileConteiner.classList.remove('modal-profile-open');
+  }
+});
+
+
 
 
 

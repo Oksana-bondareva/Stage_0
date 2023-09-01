@@ -979,7 +979,7 @@ h1 {
     text-align: center;
   }
 
-  .dropmenu-h2::after {
+  .dropmenu-h2::after, .dropmenu-h2-profile::after {
     display: block;
     position: absolute;
     text-align: center;
@@ -989,6 +989,21 @@ h1 {
     background: #BB945F;
     margin: 0px 20px 0px;
    } 
+
+   .dropmenu-h2-profile {
+    color: #000;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; 
+    margin-top: 5px;
+    text-align: center;
+  }
+
+   .card-number-div {
+    display: none;
+   }
 
   .login, .register, .my-profile, .logout {
    color: #000;
@@ -1139,7 +1154,7 @@ h1 {
   overflow: auto;
  }
 
- .modal-register-open, .modal-login-open {
+ .modal-register-open, .modal-login-open, .modal-profile-open {
   background: #000;
   height: 100%;
   opacity: 0.9;
@@ -1150,7 +1165,7 @@ h1 {
   left: 0;
  }
 
- .close-modal3, .close-modal4 {
+ .close-modal3, .close-modal4, .close-modal5 {
   display: none;
  }
 
@@ -1182,6 +1197,199 @@ h1 {
   z-index: 5;
   text-transform: uppercase;
   cursor: pointer;
+ }
+
+ .modal5 {
+  width: 600px;
+  height: 400px;
+  background: #FFF;
+  display: flex;
+  position: relative;
+  display: none;
+ }
+
+ .open-modal5 {
+  display: block;
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  left: 30%;
+  top: 25%;
+ }
+
+ .close-modal-profile {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 15px;
+  position: absolute;
+  margin-left: 560px;
+  cursor: pointer;
+}
+
+ .modal-profile-name-conteiner {
+  width: 170px;
+  height: 403px;
+  flex-shrink: 0;
+  background: #0C0C0E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .modal-profile-my-profile-conteiner {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+ }
+
+ .profile-name-avatar {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  background: #FFF;
+  margin-top: 139px;
+  margin-bottom: 20px;
+ }
+
+ .profile-name-avatar-letters {
+  color: #BB945F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  text-transform: capitalize;
+  margin-top: 30px;
+ }
+
+ .profile-name-name-letters {
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  text-transform: capitalize;
+  margin-top: 5px;
+  margin-bottom: 5px;
+ }
+
+ .profile-name-name {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+  background: #FFF;
+ }
+
+ .h2-modal-profile {
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 203px;
+ }
+
+ .counts {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 20px;
+ }
+
+ .count-visits, .count-bonuses, .count-books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+ }
+
+ .h3-count {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+ }
+
+ .cout-number-visits, .cout-number-bonuses, .cout-number-books {
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+ }
+
+ .rnted-books {
+  color: #0C0C0E;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  margin-left: 20px;
+  margin-bottom: 30px;
+ }
+
+ .rnted-books-li {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-left: 20px;
+  margin-bottom: 10px;
+ }
+
+ .rnted-books-ul {
+  margin-left: 20px;
+ }
+
+ .card-number-modal-profile {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 20px;
+ }
+
+ .p-card-number-modal-profile {
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+ }
+
+ .div-card-number-modal-profile {
+  color: #BB945F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  width: 113px;
  }
 
   @media (max-width: 1024px) {
@@ -1434,6 +1642,11 @@ h1 {
      .icon-profile-register {
       right: 14%;
       top: 5%;
+     }
+
+     .open-modal5 {
+      left: 10%;
+      top: 20%;
      }
 
   }
