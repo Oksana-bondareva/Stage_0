@@ -84,6 +84,7 @@ h1 {
     margin-top: 31px;
     margin-right: 20px;
     margin-left: 40px;
+    cursor: pointer;
 }
 
 .nav-link {
@@ -1261,8 +1262,8 @@ h1 {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 100% */
-  text-transform: capitalize;
+  line-height: 20px; 
+  text-transform: uppercase;
   margin-top: 30px;
  }
 
@@ -1326,7 +1327,7 @@ h1 {
   text-transform: capitalize;
  }
 
- .cout-number-visits, .cout-number-bonuses, .cout-number-books {
+ .count-number-visits, .count-number-bonuses, .count-number-books {
   text-align: center;
   font-family: Inter;
   font-size: 10px;
@@ -1390,6 +1391,149 @@ h1 {
   font-weight: 400;
   line-height: 20px; 
   width: 113px;
+ }
+
+ .icon-copy-modal-profile {
+  cursor: pointer;
+ }
+
+ .modal6 {
+  width: 640px;
+  height: 540px;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+ }
+
+ .card-wrapper {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 35px;
+  margin-right: 35px;
+ }
+
+ .buy-card-label {
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+  padding-right:40px;
+ }
+
+ .cvc {
+  padding-right: 130px;
+ }
+
+ .h2-buy-library-card {
+  color: #FFF;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 50% */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-top: 20px;
+ }
+
+ .h2-buy-library-card-wrapper {
+  width: 640px;
+  height: 60px;
+  flex-shrink: 0;
+  background: #0C0C0E;
+ }
+
+ .close-modal-buy-card {
+  position: absolute;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 25px;
+  margin-left: 600px;
+ }
+
+ .form-buy-library-card {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .buy-card-input-width200 {
+  width: 200px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 1px solid #BB945F;
+  margin-top: 10px;
+ }
+
+ .buy-card-input-width45 {
+  width: 45px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 1px solid #BB945F;
+  margin-top: 10px;
+ }
+
+ .cardholder-name {
+  margin-top: 10px;
+ }
+
+ .form-bank-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+ }
+
+ .p-text-buy-card {
+  width: 330px;
+  color: #8E8E8E;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 2px;
+ }
+ 
+ .div-text-buy-card {
+  margin-left: 40px;
+ }
+
+ .buy-btn-library-card {
+  display: flex;
+ }
+
+ .btn-library-card {
+  width: 75px;
+  height: 30px;
+  flex-shrink: 0;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-top: 20px;
+ }
+
+ .price-library-card {
+  color: #0C0C0E;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; 
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 25px;
+  margin-top: 30px;
  }
 
   @media (max-width: 1024px) {

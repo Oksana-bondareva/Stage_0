@@ -447,10 +447,10 @@
       </div>
       <div class="modal-profile-name-conteiner">
         <div class="profile-name-avatar">
-          <div class="profile-name-avatar-letters">hjkk</div>
+          <div class="profile-name-avatar-letters"></div>
         </div>
         <div class="profile-name-name">
-          <div class="profile-name-name-letters">ffg</div>
+          <div class="profile-name-name-letters"></div>
         </div>
       </div>
       <div class="modal-profile-my-profile-conteiner">
@@ -460,17 +460,17 @@
           <div class="count-visits">
             <h3 class="h3-count">visits</h3>
             <img class="icon-profile-modal-profile" src="img/Union.svg" alt="icon user">
-            <div class="cout-number-visits">11</div>
+            <div class="count-number-visits">1</div>
           </div>
           <div class="count-bonuses">
             <h3 class="h3-count">bonuses</h3>
             <img class="icon-star-modal-profile" src="img/Star 1.svg" alt="icon star">
-            <div class="cout-number-bonuses">11</div>
+            <div class="count-number-bonuses">1240</div>
           </div>
           <div class="count-books">
             <h3 class="h3-count">Books</h3>
             <img class="icon-book-modal-profile" src="img/book.svg" alt="icon book">
-            <div class="cout-number-books">11</div>
+            <div class="count-number-books">0</div>
           </div>
         </div>
         <div class="rnted-books-wrapper">
@@ -489,6 +489,52 @@
       </div>
     </div>
   </div>
+    <div class="buy-library-card">
+      <div class="modal6">
+        <div class="close-modal-buy-card">
+          <img src="/library/img/close_btn(1).svg" alt="Close icon">
+         </div>
+         <div class="h2-buy-library-card-wrapper">
+           <h2 class="h2-buy-library-card">Buy a library card</h2>
+         </div>
+        <div class="card-wrapper">
+         <div class="conteiner-buy-library-card">
+          <div class="bank-card">
+            <form class="form-buy-library-card">
+              <div class="form-bank-card">
+               <label class="bank-card-number buy-card-label" for="bank-card-number"><b>Bank card number</b>
+                 <input required minlength="16" maxlength="16" pattern="^[ 0-9]+$" class="bank-card--number-input buy-card-input-width200" type="text" name="bank-card-number-input">
+               </label>
+               <label class="expiration-code buy-card-label" for="expiration-code"><b>Expiration code</b>
+                 <input required minlength="2" maxlength="2" pattern="^[ 0-9]+$" class="expiration-code-input1 buy-card-input-width45" type="text" name="expiration-code-input">
+                 <input required minlength="2" maxlength="2" pattern="^[ 0-9]+$" class="expiration-code-input2 buy-card-input-width45" type="text" name="expiration-code-input">
+               </label>
+               <label class="cvc" for="cvc-name buy-card-label"><b>CVC</b>
+                 <input required minlength="3" maxlength="3" pattern="^[ 0-9]+$" class="cvc-input buy-card-input-width45" type="text" name="cvc-input">
+               </label>
+               <label class="cardholder-name buy-card-label" for="password"><b>Cardholder name</b>
+                 <input required class="cardholder-name-input buy-card-input-width200" type="text" name="cardholder-name-input">
+               </label>
+               <label class="postal-code buy-card-label" for="postal-code"><b>Postal code</b>
+                <input required class="postal-code-input buy-card-input-width200" type="text" name="postal-code-input">
+               </label>
+               <label class="city-town buy-card-label" for="city-town"><b>City / Town</b>
+                <input required class="city-town-input buy-card-input-width200" type="text" name="city-town-input">
+               </label>
+              </div>
+              <div class="buy-btn-library-card">
+               <button type="submit" class="btn-library-card">Buy</button>
+               <div class="price-library-card">$ 25.00</div>
+              </div>
+             </form>
+          </div>
+         </div>
+         <div class="div-text-buy-card">
+          <p class="p-text-buy-card"> If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.</p>
+         </div>
+        </div>
+      </div>
+    </div>
   <script src="index.js"></script>
 </body>
 </html>

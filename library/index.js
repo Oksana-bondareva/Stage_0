@@ -256,6 +256,7 @@ let lastName = localStorage.getItem('last-name-register-input');
 let iconProfileRegister = document.querySelector('.icon-profile-register');
 let iconName = document.querySelector('.icon-name').textContent = firstName[0] + lastName[0];
 let iconNameTitle = document.querySelector('.icon-name').title = firstName + " " + lastName;
+let countVisits = document.querySelector('.count-number-visits');
 
 for (let i = 0; i < formFiledRegister.length; i++) {
   formFiledRegister[i].addEventListener('change', changeHandler)
@@ -270,6 +271,7 @@ const numberCard = document.querySelector('.card-number-div').textContent = Numb
 function changeHandler() {
   localStorage.setItem(this.name, this.value);
   localStorage.setItem('isAuth', true);
+  localStorage.setItem('countVisits', 1);
 };
 
 let profileName = document.querySelector('.dropmenu-h2-profile').textContent = localStorage.getItem('number-card'); 
@@ -307,6 +309,10 @@ let myProfile = document.querySelector('.my-profile');
 let modalMyProfile = document.querySelector('.modal5');
 let closeModal5 = document.querySelector('.close-modal-profile');
 let myProfileConteiner = document.querySelector('.modal-profile');
+let nameAvatarModalProfile = document.querySelector('.profile-name-avatar-letters').textContent = firstName[0] + lastName[0];
+let nameNameModalProfile = document.querySelector('.profile-name-name-letters').textContent = firstName + " " + lastName;
+let numberCardModalProfile = document.querySelector('.div-card-number-modal-profile').textContent = localStorage.getItem('number-card');
+let iconCopy = document.querySelector('.icon-copy-modal-profile');
 
 myProfile.addEventListener('click', function(){
 	modalMyProfile.classList.add('open-modal5');
@@ -325,6 +331,10 @@ window.addEventListener('click', e => {
     modalMyProfile.classList.remove('open-modal5'); 
     myProfileConteiner.classList.remove('modal-profile-open');
   }
+});
+
+iconCopy.addEventListener('click', function(){
+	navigator.clipboard.writeText(numberCardModalProfile)
 });
 
 
