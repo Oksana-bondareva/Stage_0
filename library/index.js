@@ -297,6 +297,22 @@ window.addEventListener('click', e => {
   }
 });
 
+let btnFormLogin = document.querySelector('.form-login-submit');
+let userEmail = localStorage.getItem('e-mail-register-input');
+let userPassword = localStorage.getItem('password-register-input');
+let loginEmail = document.querySelector('.e-mail-login-input');
+let loginPassword = document.querySelector('.password-login-input');
+
+btnFormLogin.addEventListener('click', function(){
+  let loginEmailValue = loginEmail.value;
+  let loginPasswordValue = loginPassword.value;
+  if (userEmail === loginEmailValue && userPassword === loginPasswordValue) {
+    modal2.classList.remove('open-modal2');
+    localStorage.setItem('isAuth', true);
+    location.reload();
+  }
+});
+
 let logOut = document.querySelector('.logout');
 
 logOut.addEventListener('click', function(){
