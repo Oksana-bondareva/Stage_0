@@ -241,13 +241,6 @@ logInButton.addEventListener('click', function(){
   modalLogin.classList.add('modal-login-open');
 });
 
-Array.from(document.querySelectorAll('.buy'), function(el){
-  el.onclick = function(){
-    modal4.classList.add('open-modal4');
-    modalLogin.classList.add('modal-login-open');
-  }
-})
-
 let formRegister = document.querySelector('.form-register');  
 let formFiledRegister = document.querySelectorAll('.form-register-input');  
 let formRegisterSubmit = formRegister.querySelector('[type="submit"]');
@@ -283,6 +276,38 @@ if (isAuth === 'true') {
 }
 else {
   iconProfileRegister.style.display = "none";
+};
+
+let modal6 = document.querySelector('.modal6');
+let closeModal6 = document.querySelector('.close-modal-buy-card');
+let modal6Open = document.querySelector('.buy-library-card');
+
+closeModal6.addEventListener('click', function(){
+	modal6.classList.remove('open-modal6');
+  modal6Open.classList.remove('modal-buy-card-open');
+});
+
+window.addEventListener('click', e => {
+  const target = e.target 
+  if (!target.closest('.modal6') && !target.closest('.buy')) {
+    modal6.classList.remove('open-modal6'); 
+    modal6Open.classList.remove('modal-buy-card-open');
+  }
+});
+
+if (isAuth === 'false') { Array.from(document.querySelectorAll('.buy'), function(el){
+  el.onclick = function(){
+    modal4.classList.add('open-modal4');
+    modal6Open.classList.add('modal-buy-card-open');
+  }
+})
+}
+ else { Array.from(document.querySelectorAll('.buy'), function(el){
+  el.onclick = function(){
+    modal6.classList.add('open-modal6');
+    modal6Open.classList.add('modal-buy-card-open');
+  }
+})
 };
 
 iconProfileRegister.addEventListener('click', function(){
@@ -329,6 +354,7 @@ let nameAvatarModalProfile = document.querySelector('.profile-name-avatar-letter
 let nameNameModalProfile = document.querySelector('.profile-name-name-letters').textContent = firstName + " " + lastName;
 let numberCardModalProfile = document.querySelector('.div-card-number-modal-profile').textContent = localStorage.getItem('number-card');
 let iconCopy = document.querySelector('.icon-copy-modal-profile');
+let btnProfile = document.querySelector('.btn-profile');
 
 myProfile.addEventListener('click', function(){
 	modalMyProfile.classList.add('open-modal5');
@@ -343,7 +369,7 @@ closeModal5.addEventListener('click', function(){
 
 window.addEventListener('click', e => {
   const target = e.target 
-  if (!target.closest('.modal2') && !target.closest('.modal5')) {
+  if (!target.closest('.modal2') && !target.closest('.modal5') && !target.closest('.btn-profile')) {
     modalMyProfile.classList.remove('open-modal5'); 
     myProfileConteiner.classList.remove('modal-profile-open');
   }
@@ -352,6 +378,34 @@ window.addEventListener('click', e => {
 iconCopy.addEventListener('click', function(){
 	navigator.clipboard.writeText(numberCardModalProfile)
 });
+
+btnProfile.addEventListener('click', function(){
+	modalMyProfile.classList.add('open-modal5');
+  myProfileConteiner.classList.add('modal-profile-open');
+});
+
+let checkTheCard = document.querySelector('.check-the-card'); 
+let librarycard = document.querySelector('.librarycard');
+let librarycard2 = document.querySelector('.librarycard2');
+let userNameDigitalCard = document.querySelector('.name-value').textContent = firstName + " " + lastName;;
+let numberCardDigitalCard = document.querySelector('.card-number-value').textContent = localStorage.getItem('number-card'); 
+
+checkTheCard.addEventListener('click', function(){
+	if (isAuth === 'false') {
+    setTimeout(function() {
+      librarycard.style.position = 'static';
+      librarycard2.style.display = 'block'; 
+  }, 10000);
+  }
+});
+
+if (isAuth === 'true') {
+  librarycard.style.position = 'static';
+  librarycard2.style.display = 'block'; 
+};
+
+
+
 
 
 

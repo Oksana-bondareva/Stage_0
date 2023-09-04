@@ -665,6 +665,8 @@ h1 {
   .librarycard {
     height: 614px;
     width: 100%;
+    z-index: 10;
+    position: relative;
   }
 
   .librarycard-box {
@@ -782,7 +784,7 @@ h1 {
     cursor: pointer;
   }
 
-  .p-get-a-card {
+  .p-get-a-card, .p-get-a-card2 {
     width: 456px;
     color: #000;
     text-align: right;
@@ -1155,7 +1157,7 @@ h1 {
   overflow: auto;
  }
 
- .modal-register-open, .modal-login-open, .modal-profile-open {
+ .modal-register-open, .modal-login-open, .modal-profile-open, .modal-buy-card-open {
   background: #000;
   height: 100%;
   opacity: 0.9;
@@ -1180,7 +1182,7 @@ h1 {
   flex-shrink: 0;
   fill: #FFF;
   position: absolute;
-  right: 4%;
+  right: 4.5%;
   top: 4%;
   color: #BB945F;
   font-family: Inter;
@@ -1404,6 +1406,16 @@ h1 {
   display: flex;
   flex-direction: column;
   position: relative;
+  display: none;
+ }
+
+ .open-modal6 {
+  display: block;
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  left: 30%;
+  top: 15%;
  }
 
  .card-wrapper {
@@ -1534,6 +1546,54 @@ h1 {
   text-transform: uppercase;
   margin-left: 25px;
   margin-top: 30px;
+ }
+
+ .counts-library-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  height: 63px;
+ }
+ 
+ .count-visits-library-card, .count-bonuses-library-card, .count-books-library-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  height: 30px;
+ }
+
+ .name-value, .card-number-value {
+  color: #BB945F;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+ }
+
+ .librarycard2 {
+  height: 614px;
+  position: absolute;
+  top: 4380px;
+  display: none;
+  width: 1440px;
+ }
+
+ .get-a-card2 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 121px;
+  right: 20px;
+ }
+ 
+ .btn-profile {
+  margin-left: 380px;
+  margin-top: 40px;
  }
 
   @media (max-width: 1024px) {
@@ -1791,6 +1851,37 @@ h1 {
      .open-modal5 {
       left: 10%;
       top: 20%;
+     }
+
+     .librarycard2 {
+      margin-top: 2315px;
+      height: 879px;
+      width: 100%;
+     }
+
+     .librarycard-box2 {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 7%;
+      width: 600px;
+     }
+    
+     .get-a-card2 {
+      height: 284px;
+      text-align: center;
+      top: 594px;
+      left: 10%;
+     }
+     
+     .btn-profile {
+      margin-left: 40%;
+     }
+
+     .p-get-a-card2 {
+     
+      margin-top: 25px;
+      text-align: center;
+      width: 600px;
      }
 
   }
