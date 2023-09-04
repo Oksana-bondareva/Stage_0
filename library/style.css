@@ -1884,6 +1884,11 @@ h1 {
       width: 600px;
      }
 
+     .open-modal6 {
+      left: 8%;
+      top: 10%;
+     }
+
   }
 
   @media (max-width: 768px) {

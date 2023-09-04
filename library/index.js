@@ -310,6 +310,8 @@ if (isAuth === 'false') { Array.from(document.querySelectorAll('.buy'), function
 })
 };
 
+
+
 iconProfileRegister.addEventListener('click', function(){
 	modal2.classList.toggle('open-modal2');
   menuNav.classList.remove('open');
@@ -334,9 +336,14 @@ btnFormLogin.addEventListener('click', function(){
   if (userEmail === loginEmailValue && userPassword === loginPasswordValue) {
     modal2.classList.remove('open-modal2');
     localStorage.setItem('isAuth', true);
+    let countVisits = (Number(localStorage.getItem('countVisits')) + 1);
+    localStorage.setItem('countVisits', countVisits);
     location.reload();
   }
 });
+
+let countNumberVisits = document.querySelector('.count-number-visits').textContent = localStorage.getItem('countVisits');
+let countNumberVisitsProfile = document.querySelector('.count-number-visits-profile').textContent = localStorage.getItem('countVisits');
 
 let logOut = document.querySelector('.logout');
 
@@ -387,22 +394,35 @@ btnProfile.addEventListener('click', function(){
 let checkTheCard = document.querySelector('.check-the-card'); 
 let librarycard = document.querySelector('.librarycard');
 let librarycard2 = document.querySelector('.librarycard2');
-let userNameDigitalCard = document.querySelector('.name-value').textContent = firstName + " " + lastName;;
+let userNameDigitalCard = document.querySelector('.name-value').textContent = firstName + " " + lastName;
 let numberCardDigitalCard = document.querySelector('.card-number-value').textContent = localStorage.getItem('number-card'); 
+let userNameLibraryCard = document.querySelector('.user-name-librarycard');
+let numberCardLibraryCard = document.querySelector('.card-number-name-librarycard');
 
-checkTheCard.addEventListener('click', function(){
-	if (isAuth === 'false') {
-    setTimeout(function() {
+if (userNameLibraryCard === userNameDigitalCard && numberCardLibraryCard === numberCardDigitalCard) {checkTheCard.addEventListener('click', function(){
       librarycard.style.position = 'static';
       librarycard2.style.display = 'block'; 
   }, 10000);
-  }
-});
+};
 
 if (isAuth === 'true') {
   librarycard.style.position = 'static';
   librarycard2.style.display = 'block'; 
 };
+
+checkTheCard.addEventListener('click', function(){
+  let loginNameValue = userNameLibraryCard.value;
+  let loginNumberCardValue = numberCardLibraryCard.value;
+  if (userNameDigitalCard === loginNameValue && numberCardDigitalCard === loginNumberCardValue) {
+    librarycard.style.position = 'static';
+    librarycard2.style.display = 'block'; 
+    setTimeout(function() {
+      librarycard2.style.display = 'none'; 
+      location.reload();
+   }, 10000);
+  } 
+});
+
 
 
 

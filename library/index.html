@@ -329,11 +329,11 @@
             <div class="librarycard-box">
             <div class="find-card">
               <h3 class="h3-find-card">Find your Library card</h3>
-              <form class="form-card">
+              <form class="form-card" onsubmit="return false;">
                <div class="form-conteiner">
                 <h4 class="form-name">Brooklyn Public Library</h4>
-                <input class="form-text" type="text" name="reader's-name" placeholder="Reader's name ">
-                <input class="form-text" type="text" name="card-number" placeholder="Card number">
+                <input class="form-text user-name-librarycard" type="text" name="reader's-name" placeholder="Reader's name ">
+                <input class="form-text card-number-name-librarycard" type="text" name="card-number" placeholder="Card number">
               </div>
                 <button class="form-submit check-the-card">Check the card</button>
               </form>
@@ -498,7 +498,7 @@
           <div class="count-visits">
             <h3 class="h3-count">visits</h3>
             <img class="icon-profile-modal-profile" src="img/Union.svg" alt="icon user">
-            <div class="count-number-visits">1</div>
+            <div class="count-number-visits count-number-visits-profile">1</div>
           </div>
           <div class="count-bonuses">
             <h3 class="h3-count">bonuses</h3>
