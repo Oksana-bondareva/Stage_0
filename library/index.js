@@ -281,6 +281,8 @@ else {
 let modal6 = document.querySelector('.modal6');
 let closeModal6 = document.querySelector('.close-modal-buy-card');
 let modal6Open = document.querySelector('.buy-library-card');
+let btnBuyLibraryCard = document.querySelector('.buy-btn-library-card');
+let btnBuy = document.querySelectorAll('.buy');
 
 closeModal6.addEventListener('click', function(){
 	modal6.classList.remove('open-modal6');
@@ -298,7 +300,7 @@ window.addEventListener('click', e => {
 if (isAuth === 'false') { Array.from(document.querySelectorAll('.buy'), function(el){
   el.onclick = function(){
     modal4.classList.add('open-modal4');
-    modal6Open.classList.add('modal-buy-card-open');
+    modalLogin.classList.add('modal-login-open');
   }
 })
 }
@@ -309,8 +311,6 @@ if (isAuth === 'false') { Array.from(document.querySelectorAll('.buy'), function
   }
 })
 };
-
-
 
 iconProfileRegister.addEventListener('click', function(){
 	modal2.classList.toggle('open-modal2');
@@ -323,6 +323,31 @@ window.addEventListener('click', e => {
     modal2.classList.remove('open-modal2'); 
   }
 });
+
+btnBuyLibraryCard.addEventListener('click', function(){
+	localStorage.setItem('buy-abonement', true);
+});
+
+let buyAbonement = localStorage.getItem('buy-abonement');
+let countBooks = 0;
+let countBooksNumber = document.querySelector('.count-number-books');
+let countBooksNumberProfile = document.querySelector('.count-number-books-profile');
+
+
+if (buyAbonement === 'true') {
+  Array.from(document.querySelectorAll('.buy'), function(el){
+    el.onclick = function(){
+      el.classList.add('own');
+      el.setAttribute('disabled', '');
+      el.textContent = 'Own';
+      el.style.background = 'white';
+      countBooks++;
+      countBooksNumber.innerHTML = countBooks;
+      countBooksNumberProfile.innerHTML = countBooks;
+    }
+  })
+};
+
 
 let btnFormLogin = document.querySelector('.form-login-submit');
 let userEmail = localStorage.getItem('e-mail-register-input');
@@ -398,12 +423,6 @@ let userNameDigitalCard = document.querySelector('.name-value').textContent = fi
 let numberCardDigitalCard = document.querySelector('.card-number-value').textContent = localStorage.getItem('number-card'); 
 let userNameLibraryCard = document.querySelector('.user-name-librarycard');
 let numberCardLibraryCard = document.querySelector('.card-number-name-librarycard');
-
-if (userNameLibraryCard === userNameDigitalCard && numberCardLibraryCard === numberCardDigitalCard) {checkTheCard.addEventListener('click', function(){
-      librarycard.style.position = 'static';
-      librarycard2.style.display = 'block'; 
-  }, 10000);
-};
 
 if (isAuth === 'true') {
   librarycard.style.position = 'static';
