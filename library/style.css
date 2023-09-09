@@ -14,6 +14,7 @@ nav, h1, h2, h3, p, section, input {
     scroll-behavior: smooth;
   }
 
+
   body {
     width: 1440px;
     margin: 0 auto;
@@ -83,6 +84,7 @@ h1 {
     margin-top: 31px;
     margin-right: 20px;
     margin-left: 40px;
+    cursor: pointer;
 }
 
 .nav-link {
@@ -168,13 +170,22 @@ h1 {
   }
 
    .slaider {
-    display: flex;
-    justify-content: space-around;
+    overflow: hidden;
    }
 
-   .img-slaider1, .img-slaider2, .img-slaider3 {
-    width: 450px;
+   .img-slaider-conteiner {
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+   }
+
+   .img-slaider {
+    min-width: 450px;
     height: 560px;
+    transition: 1s;
+    margin-right: 25px;
    }
 
    .pagination-container{
@@ -187,9 +198,9 @@ h1 {
    .pagination1 {
     width: 16px;
     height: 16px;
-    background-color: #BB945F;
+    background-color: #000000;
     border-radius: 50%;
-    border: 1px solid #BB945F;
+    border: 1px solid #000000;
     cursor: pointer;
    }
 
@@ -213,6 +224,15 @@ h1 {
 
    .pagination4, .pagination5 {
     display: none;
+   }
+
+   .activ-pagination {
+    background-color: #BB945F;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #BB945F;
    }
 
    .block-pagination {
@@ -293,8 +313,41 @@ h1 {
     margin-right: 20px;
   }
 
-  .books-spring, .books-summer, .books-autumn {
-    display: none;
+  .books-winter {
+    z-index: 1;
+  }
+ 
+  .books-spring {
+    z-index: 2;
+    position: absolute;
+    margin-top: 250px;
+    margin-right: 60px;
+  }
+
+  .books-summer {
+    z-index: 3;
+    position: absolute;
+    margin-top: 250px;
+    margin-right: 60px;
+  }
+
+  .books-autumn {
+    z-index: 4;
+    position: absolute;
+    margin-top: 250px;
+    margin-right: 60px;
+  }
+
+  .books-hidden {
+    opacity: 0; 
+    transition: opacity 2s linear;
+    z-index: 1;
+  }
+
+  .book-visible {
+    opacity: 1;
+    transition: opacity 2s linear 0.8s;
+    z-index: 10;
   }
 
   .book {
@@ -385,11 +438,11 @@ h1 {
     cursor: pointer;
   }
 
-  .buy:hover {
+ .buy:hover {
     width: 75px;
     height: 30px;
     border-radius: 2px;
-    border: 1px solid #BB945F;
+    border: 1px solid #BB945F; 
     background: #BB945F;
     transition: 2s;
   }
@@ -612,6 +665,8 @@ h1 {
   .librarycard {
     height: 614px;
     width: 100%;
+    z-index: 10;
+    position: relative;
   }
 
   .librarycard-box {
@@ -729,7 +784,7 @@ h1 {
     cursor: pointer;
   }
 
-  .p-get-a-card {
+  .p-get-a-card, .p-get-a-card2 {
     width: 456px;
     color: #000;
     text-align: right;
@@ -898,6 +953,661 @@ h1 {
     display: none;
   }
 
+  .modal1, .modal2 {
+    z-index: 10;
+    width: 80px;
+    height: 115px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    position: fixed;
+    top: 55px;
+    bottom: 0;
+    right: 60px;
+    display: none;
+  }
+
+  .dropmenu-h2 {
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; 
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  .dropmenu-h2::after, .dropmenu-h2-profile::after {
+    display: block;
+    position: absolute;
+    text-align: center;
+    content: '';
+    height: 1px; 
+    width: 40px;
+    background: #BB945F;
+    margin: 5px 20px 0px;
+   } 
+
+   .dropmenu-h2-profile {
+    color: #000;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; 
+    margin-top: 5px;
+    text-align: center;
+  }
+
+   .card-number-div {
+    display: none;
+   }
+
+  .login, .register, .my-profile, .logout {
+   color: #000;
+   text-align: center;
+   font-family: Inter;
+   font-size: 15px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 20px;
+   cursor: pointer;
+  }
+
+  .login, .my-profile {
+    margin-top: 20px;
+  }
+
+  .register, .logout {
+    margin-top: 10px;
+  }
+
+  .open-modal1, .open-modal2 {
+    display: block;
+  }
+
+  .close-modal1, .close-modal2 {
+    display: none;
+  }
+
+  .modal3 {
+    width: 250px;
+    height: 382px;
+    background: #FFF;
+    display: flex;
+    position: relative;
+    display: none;
+  }
+
+  .modal4 {
+    width: 250px;
+    height: 262px;
+    background: #FFF;
+    display: flex;
+    position: relative;
+    display: none;
+  }
+
+  .close-modal-register, .close-modal-login {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    margin-top: 15px;
+    position: absolute;
+    margin-left: 220px;
+    cursor: pointer;
+  }
+
+  .form-register, .form-login {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .form-register-name, .form-login-name {
+    text-align: center;
+    font-family: Forum;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .label-register, .label-login {
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.3px;
+  }
+
+  .form-register-input, .form-login-input {
+    width: 200px;
+    height: 20px;
+    flex-shrink: 0;
+    border: 1px solid #BB945F;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form-register-submit, .form-login-submit {
+    width: 75px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-left: 25px;
+  }
+
+  .p-form-register-have-account, .p-form-login-have-account {
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .href-form-register-have-account, .href-form-login-have-account {
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+  }
+
+  .form-register-have-account, .form-login-have-account {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+  }
+
+ .open-modal3, .open-modal4 {
+  display: block;
+  z-index: 10;
+  position: fixed;
+  left: 40%;
+  top: 20%;
+  overflow: auto;
+ }
+
+ .modal-register-open, .modal-login-open, .modal-profile-open, .modal-buy-card-open {
+  background: #000;
+  height: 100%;
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+ }
+
+ .close-modal3, .close-modal4, .close-modal5 {
+  display: none;
+ }
+
+ .href-form-register-have-account, .href-form-login-have-account {
+  cursor: pointer;
+ }
+
+ .icon-profile-register-div {
+  width: 28px;
+  height: 28px;
+ }
+
+ .icon-profile-register {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  fill: #FFF;
+  position: absolute;
+  right: 4.5%;
+  top: 4%;
+  color: #BB945F;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  display: none;
+ }
+
+ .icon-name {
+  position: absolute;
+  right: 11%;
+  top: 16%;
+  z-index: 5;
+  text-transform: uppercase;
+  cursor: pointer;
+ }
+
+ .modal5 {
+  width: 600px;
+  height: 400px;
+  background: #FFF;
+  display: flex;
+  position: relative;
+  display: none;
+ }
+
+ .open-modal5 {
+  display: block;
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  left: 30%;
+  top: 25%;
+ }
+
+ .close-modal-profile {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 20px;
+  position: absolute;
+  margin-left: 555px;
+  cursor: pointer;
+}
+
+ .modal-profile-name-conteiner {
+  width: 170px;
+  height: 403px;
+  flex-shrink: 0;
+  background: #0C0C0E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .modal-profile-my-profile-conteiner {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+ }
+
+ .profile-name-avatar {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  background: #FFF;
+  margin-top: 139px;
+  margin-bottom: 15px;
+ }
+
+ .profile-name-avatar-letters {
+  color: #BB945F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  text-transform: uppercase;
+  margin-top: 30px;
+ }
+
+ .profile-name-name-letters {
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 5px;
+ }
+
+ .profile-name-name {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+  background: #FFF;
+ }
+
+ .h2-modal-profile {
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 203px;
+ }
+
+ .counts {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 20px;
+ }
+
+ .count-visits, .count-bonuses, .count-books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+ }
+
+ .h3-count {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+ }
+
+ .count-number-visits, .count-number-bonuses, .count-number-books {
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+ }
+
+ .rnted-books {
+  color: #0C0C0E;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  margin-left: 20px;
+  margin-bottom: 30px;
+ }
+
+ .rnted-books-li {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  overflow: scroll;
+ }
+
+ .rnted-books-ul {
+  margin-left: 20px;
+  height: 50px;
+  overflow: scroll;
+ }
+
+ .card-number-modal-profile {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 20px;
+ }
+
+ .p-card-number-modal-profile {
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+ }
+
+ .div-card-number-modal-profile {
+  color: #BB945F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  width: 113px;
+  margin-left: 8px;
+ }
+
+ .icon-copy-modal-profile {
+  cursor: pointer;
+  margin-left: 22px;
+ }
+
+ .modal6 {
+  width: 640px;
+  height: 540px;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  display: none;
+ }
+
+ .open-modal6 {
+  display: block;
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  left: 30%;
+  top: 15%;
+ }
+
+ .card-wrapper {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 35px;
+  margin-right: 35px;
+ }
+
+ .buy-card-label {
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+  padding-right:40px;
+ }
+
+ .cvc {
+  padding-right: 130px;
+ }
+
+ .h2-buy-library-card {
+  color: #FFF;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 50% */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-top: 20px;
+ }
+
+ .h2-buy-library-card-wrapper {
+  width: 640px;
+  height: 60px;
+  flex-shrink: 0;
+  background: #0C0C0E;
+ }
+
+ .close-modal-buy-card {
+  position: absolute;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 25px;
+  margin-left: 600px;
+ }
+
+ .form-buy-library-card {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .buy-card-input-width200 {
+  width: 200px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 1px solid #BB945F;
+  margin-top: 10px;
+ }
+
+ .buy-card-input-width45 {
+  width: 45px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 1px solid #BB945F;
+  margin-top: 10px;
+ }
+
+ .cardholder-name {
+  margin-top: 20px;
+ }
+
+ .form-bank-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+ }
+
+ .p-text-buy-card {
+  width: 330px;
+  color: #8E8E8E;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 2px;
+ }
+ 
+ .div-text-buy-card {
+  margin-left: 40px;
+ }
+
+ .buy-btn-library-card {
+  display: flex;
+  margin-top: -10px;
+ }
+
+ .btn-library-card {
+  width: 75px;
+  height: 30px;
+  flex-shrink: 0;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  cursor: pointer;
+ }
+
+ .price-library-card {
+  color: #0C0C0E;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; 
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 25px;
+  margin-top: 30px;
+ }
+
+ .counts-library-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  height: 63px;
+ }
+ 
+ .count-visits-library-card, .count-bonuses-library-card, .count-books-library-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  height: 30px;
+ }
+
+ .name-value, .card-number-value {
+  color: #BB945F;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+ }
+
+ .librarycard2 {
+  height: 614px;
+  position: absolute;
+  top: 4380px;
+  display: none;
+  width: 1440px;
+ }
+
+ .get-a-card2 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 121px;
+  right: 20px;
+ }
+ 
+ .btn-profile {
+  margin-left: 380px;
+  margin-top: 40px;
+ }
+
   @media (max-width: 1024px) {
     body {
       width: 100%;
@@ -917,8 +1627,18 @@ h1 {
       width: 95%;
     }
 
-    .img-slaider2, .img-slaider3 {
-      display: none;
+    .slaider {
+      display: flex;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .img-slaider-conteiner {
+      margin-left: 35px;
+    }
+
+    .img-slaider {
+      margin-right: 40px;
     }
 
     .pagination-container {
@@ -926,8 +1646,9 @@ h1 {
     }
 
     .carret-left, .carret-right {
-      display: inline-block;
+      display: block;
       align-self: center;
+      position: relative;
     }
 
     .carret-left {
@@ -938,7 +1659,6 @@ h1 {
     .carret-right {
       height: 57px;
       width: 57px;
-      margin-top: 15px;
     }
 
     .pagination4, .pagination5 {
@@ -952,6 +1672,10 @@ h1 {
     .radio-button {
       width: 700px;
       justify-content: space-between;
+      background-color: #8E8E8E;
+      position: sticky;
+      top: 0px;
+      z-index: 5;
     }
 
     .radio-button-text {
@@ -961,10 +1685,7 @@ h1 {
     .books-winter, .books-spring, .books-summer, .books-autumn {
       display: flex;
       justify-content: center;
-    }
-
-    .books-spring, .books-summer, .books-autumn {
-      display: none;
+      margin-right: 40px;
     }
 
     .coffeshop {
@@ -1089,7 +1810,6 @@ h1 {
       
      .open .burger-line3 {
       transform: rotate(45deg) translate(-13px, -15px);
-
       margin-top: 9px;
      }
       
@@ -1126,6 +1846,60 @@ h1 {
       margin-top: 20px;
       align-items: center;
     }
+
+    .modal1, .modal2 {
+      right: 105px;
+    }
+
+    .open-modal3, .open-modal4 {
+      left: 35%;
+     }
+
+     .icon-profile-register {
+      right: 14%;
+      top: 5%;
+     }
+
+     .open-modal5 {
+      left: 10%;
+      top: 20%;
+     }
+
+     .librarycard2 {
+      margin-top: 2315px;
+      height: 879px;
+      width: 100%;
+     }
+
+     .librarycard-box2 {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 7%;
+      width: 600px;
+     }
+    
+     .get-a-card2 {
+      height: 284px;
+      text-align: center;
+      top: 594px;
+      left: 10%;
+     }
+     
+     .btn-profile {
+      margin-left: 40%;
+     }
+
+     .p-get-a-card2 {
+     
+      margin-top: 25px;
+      text-align: center;
+      width: 600px;
+     }
+
+     .open-modal6 {
+      left: 8%;
+      top: 10%;
+     }
 
   }
 
