@@ -274,7 +274,8 @@ function changeHandler() {
 };
 
 let profileName = document.querySelector('.dropmenu-h2-profile').textContent = localStorage.getItem('number-card'); 
-let iconName = document.querySelector('.icon-name').textContent = (firstName[0] + lastName[0]); 
+let iconName = document.querySelector('.icon-name').textContent = (firstName[0] + lastName[0]);
+let iconNameTitle = iconProfileRegister.title = (firstName + ' ' + lastName);  
 let isAuth = localStorage.getItem('isAuth');
 
 if (isAuth === 'true') {
@@ -644,10 +645,8 @@ if (buyAbonement === 'true') {
   })
 };
 
-
 let countBooksNumber = document.querySelector('.count-number-books').textContent = localStorage.getItem('countBooks');
 let countBooksNumberProfile = document.querySelector('.count-number-books-profile').textContent = localStorage.getItem('countBooks');
-
 
 let btnFormLogin = document.querySelector('.form-login-submit');
 let userEmail = localStorage.getItem('e-mail-register-input');
