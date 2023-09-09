@@ -1,3 +1,5 @@
+console.log('200/200')
+
 let menuBtn = document.querySelector('.menu-btn');
 let menuNav = document.querySelector('.nav-menu');
 
