@@ -990,7 +990,7 @@ h1 {
     height: 1px; 
     width: 40px;
     background: #BB945F;
-    margin: 0px 20px 0px;
+    margin: 5px 20px 0px;
    } 
 
    .dropmenu-h2-profile {
@@ -1020,7 +1020,7 @@ h1 {
   }
 
   .login, .my-profile {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .register, .logout {
@@ -1176,6 +1176,11 @@ h1 {
   cursor: pointer;
  }
 
+ .icon-profile-register-div {
+  width: 28px;
+  height: 28px;
+ }
+
  .icon-profile-register {
   width: 28px;
   height: 28px;
@@ -1224,9 +1229,9 @@ h1 {
   width: 15px;
   height: 15px;
   flex-shrink: 0;
-  margin-top: 15px;
+  margin-top: 20px;
   position: absolute;
-  margin-left: 560px;
+  margin-left: 555px;
   cursor: pointer;
 }
 
@@ -1254,7 +1259,7 @@ h1 {
   flex-shrink: 0;
   background: #FFF;
   margin-top: 139px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
  }
 
  .profile-name-avatar-letters {
@@ -1277,7 +1282,7 @@ h1 {
   font-weight: 400;
   line-height: 20px; /* 100% */
   text-transform: capitalize;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
  }
 
@@ -1362,10 +1367,13 @@ h1 {
   text-transform: capitalize;
   margin-left: 20px;
   margin-bottom: 10px;
+  overflow: scroll;
  }
 
  .rnted-books-ul {
   margin-left: 20px;
+  height: 50px;
+  overflow: scroll;
  }
 
  .card-number-modal-profile {
@@ -1393,10 +1401,12 @@ h1 {
   font-weight: 400;
   line-height: 20px; 
   width: 113px;
+  margin-left: 8px;
  }
 
  .icon-copy-modal-profile {
   cursor: pointer;
+  margin-left: 22px;
  }
 
  .modal6 {
@@ -1492,7 +1502,7 @@ h1 {
  }
 
  .cardholder-name {
-  margin-top: 10px;
+  margin-top: 20px;
  }
 
  .form-bank-card {
@@ -1518,6 +1528,7 @@ h1 {
 
  .buy-btn-library-card {
   display: flex;
+  margin-top: -10px;
  }
 
  .btn-library-card {
