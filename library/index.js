@@ -401,7 +401,7 @@ if (buyAbonement === 'true') {
     book1.style.background = 'white';
     let li1 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li1.innerHTML = "&bull; The Book Eaters, Sunyi Dean";
+    li1.innerHTML = "The Book Eaters, Sunyi Dean";
     li1.className ='rnted-books-li';
     ul.prepend(li1);
   };
@@ -412,7 +412,7 @@ if (buyAbonement === 'true') {
     book2.style.background = 'white';
     let li2 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li2.innerHTML = "&bull; Cackle, Rachel Harrison";
+    li2.innerHTML = "Cackle, Rachel Harrison";
     li2.className ='rnted-books-li';
     ul.prepend(li2);
   };
@@ -423,7 +423,7 @@ if (buyAbonement === 'true') {
     book3.style.background = 'white';
     let li3 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li3.innerHTML = "&bull; Dante: Poet of the Secular World, Erich Auerbach";
+    li3.innerHTML = "Dante: Poet of the Secular World, Erich Auerbach";
     li3.className ='rnted-books-li';
     ul.prepend(li3);
   };
@@ -434,7 +434,7 @@ if (buyAbonement === 'true') {
     book4.style.background = 'white';
     let li4 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li4.innerHTML = "&bull; The Last Queen, Clive Irving";
+    li4.innerHTML = "The Last Queen, Clive Irving";
     li4.className ='rnted-books-li';
     ul.prepend(li4);
   };
@@ -445,7 +445,7 @@ if (buyAbonement === 'true') {
     book5.style.background = 'white';
     let li5 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li5.innerHTML = "&bull; The Body, Stephen King";
+    li5.innerHTML = "The Body, Stephen King";
     li5.className ='rnted-books-li';
     ul.prepend(li5);
   };
@@ -456,7 +456,7 @@ if (buyAbonement === 'true') {
     book6.style.background = 'white';
     let li6 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li6.innerHTML = "&bull; Carry: A Memoir of Survival on Stolen Land, Toni Jenson";
+    li6.innerHTML = "Carry: A Memoir of Survival on Stolen Land, Toni Jenson";
     li6.className ='rnted-books-li';
     ul.prepend(li6);
   };
@@ -467,7 +467,7 @@ if (buyAbonement === 'true') {
     book7.style.background = 'white';
     let li7 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li7.innerHTML = "&bull; Days of Distraction, Alexandra Chang";
+    li7.innerHTML = "Days of Distraction, Alexandra Chang";
     li7.className ='rnted-books-li';
     ul.prepend(li7);
   };
@@ -478,7 +478,7 @@ if (buyAbonement === 'true') {
     book8.style.background = 'white';
     let li8 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li8.innerHTML = "&bull; Dominicana, Angie Cruz";
+    li8.innerHTML = "Dominicana, Angie Cruz";
     li8.className ='rnted-books-li';
     ul.prepend(li8);
   };
@@ -489,7 +489,7 @@ if (buyAbonement === 'true') {
     book9.style.background = 'white';
     let li9 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li9.innerHTML = "&bull; Crude: A Memoir, Pablo Fajardo & Sophie Tardy-Joubert";
+    li9.innerHTML = "Crude: A Memoir, Pablo Fajardo & Sophie Tardy-Joubert";
     li9.className ='rnted-books-li';
     ul.prepend(li9);
   };
@@ -500,7 +500,7 @@ if (buyAbonement === 'true') {
     book10.style.background = 'white';
     let li10 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li10.innerHTML = "&bull; Let My People Go Surfing, Yvon Chouinard";
+    li10.innerHTML = "Let My People Go Surfing, Yvon Chouinard";
     li10.className ='rnted-books-li';
     ul.prepend(li10);
   };
@@ -511,7 +511,7 @@ if (buyAbonement === 'true') {
     book11.style.background = 'white';
     let li11 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li11.innerHTML = "&bull; The Octopus Museum: Poems, Brenda Shaughnessy";
+    li11.innerHTML = "The Octopus Museum: Poems, Brenda Shaughnessy";
     li11.className ='rnted-books-li';
     ul.prepend(li11);
   };
@@ -522,7 +522,7 @@ if (buyAbonement === 'true') {
     book12.style.background = 'white';
     let li12 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li12.innerHTML = "&bull; Shark Dialogues: A Novel, Kiana Davenport";
+    li12.innerHTML = "Shark Dialogues: A Novel, Kiana Davenport";
     li12.className ='rnted-books-li';
     ul.prepend(li12);
   };
@@ -533,7 +533,7 @@ if (buyAbonement === 'true') {
     book13.style.background = 'white';
     let li13 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li13.innerHTML = "&bull; Casual Conversation, Renia White";
+    li13.innerHTML = "Casual Conversation, Renia White";
     li13.className ='rnted-books-li';
     ul.prepend(li13);
   };
@@ -544,7 +544,7 @@ if (buyAbonement === 'true') {
     book14.style.background = 'white';
     let li14 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li14.innerHTML = "&bull; The Great Fire, Lou Ureneck";
+    li14.innerHTML = "The Great Fire, Lou Ureneck";
     li14.className ='rnted-books-li';
     ul.prepend(li14);
   };
@@ -555,7 +555,7 @@ if (buyAbonement === 'true') {
     book15.style.background = 'white';
     let li15 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li15.innerHTML = "&bull; Rickey: The Life and Legend, Howard Bryant";
+    li15.innerHTML = "Rickey: The Life and Legend, Howard Bryant";
     li15.className ='rnted-books-li';
     ul.prepend(li15);
   };
@@ -566,7 +566,7 @@ if (buyAbonement === 'true') {
     book16.style.background = 'white';
     let li16 = document.createElement('li');
     let ul = document.querySelector('.rnted-books-ul');
-    li16.innerHTML = "&bull; Slug: And Other Stories, Megan Milks";
+    li16.innerHTML = "Slug: And Other Stories, Megan Milks";
     li16.className ='rnted-books-li';
     ul.prepend(li16);
   };
