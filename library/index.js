@@ -393,7 +393,7 @@ const booksListArr = [
   "Slug: And Other Stories, Megan Milks"
 ];
 
-if (buyAbonement === 'true') {
+if (buyAbonement === 'true' && isAuth === 'true') {
   if (localStorage.getItem('book1') === 'own') {
     book1.classList.add('own');
     book1.setAttribute('disabled', '');
