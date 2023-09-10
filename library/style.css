@@ -1372,7 +1372,7 @@ h1 {
  .rnted-books-ul {
   margin-left: 20px;
   height: 50px;
-  overflow: scroll;
+  overflow: auto;
  }
 
  .card-number-modal-profile {
