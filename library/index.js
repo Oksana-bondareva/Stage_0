@@ -275,7 +275,8 @@ function changeHandler() {
 
 let profileName = document.querySelector('.dropmenu-h2-profile').textContent = localStorage.getItem('number-card'); 
 let iconName = document.querySelector('.icon-name').textContent = (firstName[0] + lastName[0]);
-let iconNameTitle = iconProfileRegister.title = (firstName + ' ' + lastName);  
+iconNameTitle = iconProfileRegister.title = (firstName + ' ' + lastName); 
+let iconNAmeLettersTitle = document.querySelector('.icon-name').title = (firstName + ' ' + lastName);  
 let isAuth = localStorage.getItem('isAuth');
 
 if (isAuth === 'true') {
@@ -722,6 +723,7 @@ let userNameDigitalCard = document.querySelector('.name-value').textContent = fi
 let numberCardDigitalCard = document.querySelector('.card-number-value').textContent = localStorage.getItem('number-card'); 
 let userNameLibraryCard = document.querySelector('.user-name-librarycard');
 let numberCardLibraryCard = document.querySelector('.card-number-name-librarycard');
+let userFirstNameDigitalCard = document.querySelector('.name-value').textContent = firstName;
 
 if (isAuth === 'true') {
   librarycard.style.position = 'static';
@@ -730,8 +732,9 @@ if (isAuth === 'true') {
 
 checkTheCard.addEventListener('click', function(){
   let loginNameValue = userNameLibraryCard.value;
+  let LoginFirstNameValue = userFirstNameDigitalCard;
   let loginNumberCardValue = numberCardLibraryCard.value;
-  if (userNameDigitalCard === loginNameValue && numberCardDigitalCard === loginNumberCardValue) {
+  if (userNameDigitalCard === loginNameValue || LoginFirstNameValue === userFirstNameDigitalCard && numberCardDigitalCard === loginNumberCardValue) {
     librarycard.style.position = 'static';
     librarycard2.style.display = 'block'; 
     setTimeout(function() {
