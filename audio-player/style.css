@@ -1,0 +1,175 @@
+#background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(3px);
+    z-index: 0;
+}
+
+.conteiner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    height: 550px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #030d37;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #030737;
+}
+
+#player-fon {
+    position: absolute;
+    width: 150%;
+    height: 68%;
+    top: -1%;
+    z-index: 1;
+}
+
+#play-button {
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    cursor: pointer;
+    bottom: 14%;
+    z-index: 4;
+    left: 9%;
+    transition: 0.5s;
+}
+
+#next-song-button, #prev-song-button {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    bottom: 11%;
+    right: 8.3%;
+    z-index: 2;
+    transition: 0.5s;
+    border: 2px #030d37;
+}
+
+#prev-song-button {
+    bottom: 21%;
+}
+
+.player-wrapper {
+    position: absolute;
+    height: 50%;
+    width: 103%;
+    background: linear-gradient(35deg, rgb(201, 228, 24), rgb(6, 13, 71));
+    z-index: 2;
+    bottom: -17%;
+}
+
+.singer {
+    position: absolute;
+    z-index: 2;
+    color: rgb(247, 180, 9);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    bottom: 19%;
+    left: 30%;
+}
+
+.song {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-style: italic;
+    font-size: 19px;
+    bottom: 14%;
+    left: 30%;
+}
+
+#progress {
+    position: absolute;
+    width: 200px;
+    appearance: none;
+    z-index: 2;
+    height: 8px;
+    background: #030d37;
+    bottom: 7%;
+    border-radius: 10px;
+    left: 8%;
+}
+
+.current-time {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    bottom: -2%;
+    left: 8%;
+    z-index: 2;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.duration-time {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    bottom: 2.5%;
+    left: 57%;
+    z-index: 2;
+    font-size: 16px;
+    color:  rgb(247, 180, 9);
+}
+
+.footer-wrapper {
+    height: 40px;
+    width: 96%;
+    display: flex;
+    position: absolute;
+    top: 94%;
+    left: 2%;
+    z-index: 2;
+    background: linear-gradient(25deg, rgb(232, 234, 224), rgb(60, 172, 216));
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color:  rgb(12, 73, 4);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.github-icon {
+    margin-left: 10px;
+    padding-top: 6px;
+}
+
+.git {
+   display: inline-block;
+   padding-bottom: 6px;
+}
+
+a:hover {
+    color: #030d37;
+}
+
+.rs-icon {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.year {
+    color:  rgb(12, 73, 4);
+    font-size: 17px;
+    font-weight: bold;
+}
