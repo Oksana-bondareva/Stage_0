@@ -73,7 +73,26 @@ function playAudio() {
     }
   }
 
-  
+  function prevSong() {
+    songIndex--;
+    if (songIndex < 0) {
+      songIndex = songs.length - 1;
+    }
+    song.src = songs[songIndex];
+    playerFon.src = playerFones[songIndex];
+    background.src = playerFones[songIndex];
+    singer.textContent = singers[songIndex];
+    songName.textContent = songNames[songIndex];
+    if (isPlay = true) {
+      playButton.style.display = "block";
+      pauseButton.style.display = "none";
+      isPlay = false;
+      song.pause();
+      playerFon.style.transform = "scale(1)";
+    }
+  }
+
+
 
 
 
