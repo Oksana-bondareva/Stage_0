@@ -4,8 +4,8 @@ const playerFon = document.getElementById("player-fon");
 const singer = document.querySelector(".singer");
 const songName = document.querySelector(".song-name");
 let progress = document.getElementById("progress");
-let durationTime = document.getElementById("duration-time");
-let currentTime = document.getElementById("current-time");
+let durationTime = document.querySelector(".duration-time");
+let currentTime = document.querySelector(".current-time");
 let playButton = document.getElementById("play-button");
 let pauseButton = document.getElementById("pause-button");
 let nextButton = document.getElementById("next-song-button");
@@ -91,6 +91,33 @@ function playAudio() {
       playerFon.style.transform = "scale(1)";
     }
   }
+
+  setInterval(function songProgress() {
+     progress.max = song.duration;
+     progress.value = song.currentTime;
+     currentTime.textContent = time(song.currentTime);
+     durationTime.textContent = time(song.duration);
+  }, 300);
+
+  function time(timeSec) {
+    let minutes = Math.floor(timeSec / 60);
+    let seconds = Math.floor(timeSec - minutes * 60);
+    if (minutes < 10) {
+      minutes = '0' + minutes;
+    }
+    if (seconds < 10) {
+      seconds = '0' + seconds;
+    }
+    return `${minutes}:${seconds}`;
+  }
+
+  function progressAudio() {
+    song.currentTime = progress.value;
+  };
+
+  
+  
+
 
 
 

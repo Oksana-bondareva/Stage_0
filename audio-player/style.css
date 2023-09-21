@@ -124,6 +124,7 @@
     bottom: 7%;
     border-radius: 10px;
     left: 8%;
+    cursor: pointer;
 }
 
 .current-time {
@@ -161,6 +162,8 @@
     background: linear-gradient(25deg, rgb(232, 234, 224), rgb(60, 172, 216));
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #030737;
 }
 
 a {
