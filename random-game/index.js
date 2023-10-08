@@ -1,113 +1,55 @@
-const libraryImages = {
-    memes: [
-      'https://img.icons8.com/bubbles/100/not-bad-meme.png',
-      'https://img.icons8.com/color-glass/96/salt-bae.png',
-      'https://img.icons8.com/officel/80/scared-face-meme.png',
-      'https://img.icons8.com/color/96/trash-dove.png',
-      'https://img.icons8.com/ios-filled/100/doge.png',
-      'https://img.icons8.com/fluency/96/pogchamp.png',
-      'https://img.icons8.com/quill/100/trollface.png',
-      'https://img.icons8.com/officel/80/scared-face-meme.png',
-      'https://img.icons8.com/fluency/96/monkas.png',
-      'https://img.icons8.com/bubbles/100/not-bad-meme.png',
-      'https://img.icons8.com/office/80/head-in-sand.png',
-      'https://img.icons8.com/ios-filled/100/doge.png',
-      'https://img.icons8.com/quill/100/trollface.png',
-      "https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/65/external-Meme-april-fool's-day-smashingstocks-circular-smashing-stocks.png",
-      'https://img.icons8.com/fluency/96/monkas.png',
-      'https://img.icons8.com/color-glass/96/salt-bae.png',
-      'https://img.icons8.com/color/96/trash-dove.png',
-      'https://img.icons8.com/office/80/head-in-sand.png',
-      'https://img.icons8.com/fluency/96/pogchamp.png',
-      "https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/65/external-Meme-april-fool's-day-smashingstocks-circular-smashing-stocks.png"
-    ],
-    animals: [
-      'https://img.icons8.com/dusk/64/poodle.png',
-      'https://img.icons8.com/papercut/60/year-of-dog.png',
-      'https://img.icons8.com/officel/80/year-of-dog.png',
-      'https://img.icons8.com/color-glass/96/rat-silhuette.png',
-      'https://img.icons8.com/external-app-icons-royyan-wijaya/64/external-animal-animal-hehe-app-icons-royyan-wijaya.png',
-      'https://img.icons8.com/external-color-line-collection-vinzence-studio/64/external-animal-mid-autumn-festival-color-line-collection-vinzence-studio.png',
-      'https://img.icons8.com/dusk/64/poodle.png',
-      'https://img.icons8.com/external-house-maxicons/85/external-animal-gardening-house-maxicons-15.png',
-      'https://img.icons8.com/bubbles/100/year-of-rat.png',
-      'https://img.icons8.com/external-dual-tone-amoghdesign/64/external-animal-spring-dual-tone-amoghdesign.png',
-      'https://img.icons8.com/papercut/60/year-of-dog.png',
-      'https://img.icons8.com/color-glass/96/rat-silhuette.png',
-      'https://img.icons8.com/external-microdots-premium-microdot-graphic/64/external-animal-animal-kingdom-vol1-microdots-premium-microdot-graphic-12.png',
-      'https://img.icons8.com/bubbles/100/year-of-rat.png',
-      'https://img.icons8.com/officel/80/year-of-dog.png',
-      'https://img.icons8.com/external-dual-tone-amoghdesign/64/external-animal-spring-dual-tone-amoghdesign.png',
-      'https://img.icons8.com/external-app-icons-royyan-wijaya/64/external-animal-animal-hehe-app-icons-royyan-wijaya.png',
-      'https://img.icons8.com/external-microdots-premium-microdot-graphic/64/external-animal-animal-kingdom-vol1-microdots-premium-microdot-graphic-12.png',
-      'https://img.icons8.com/external-color-line-collection-vinzence-studio/64/external-animal-mid-autumn-festival-color-line-collection-vinzence-studio.png',
-      'https://img.icons8.com/external-house-maxicons/85/external-animal-gardening-house-maxicons-15.png'
-    ],
-    smiles: [
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-love-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-sweating-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-secret-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-love-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-mask-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-tongue-out-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev-1.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-laughing-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-sweating-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-poker-face-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-laughing-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-tongue-out-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev-1.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-mask-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-hide-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-shocked-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-sigh-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-hide-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-secret-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-sigh-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-shocked-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png',
-      'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-poker-face-bull-emoji-vitaliy-gorbachev-flat-vitaly-gorbachev.png'
-    ],
-    fruits: [
-      'https://img.icons8.com/color/96/raspberry.png',
-      'https://img.icons8.com/bubbles/100/watermelon.png',
-      'https://img.icons8.com/officel/80/peach.png',
-      'https://img.icons8.com/bubbles/50/banana.png',
-      'https://img.icons8.com/office/80/watermelon.png',
-      'https://img.icons8.com/cute-clipart/64/peach.png',
-      'https://img.icons8.com/matisse/100/dragon-fruit.png',
-      'https://img.icons8.com/stickers/100/pineapple.png',
-      'https://img.icons8.com/bubbles/100/watermelon.png',
-      'https://img.icons8.com/cotton/64/citrus.png',
-      'https://img.icons8.com/bubbles/50/banana.png',
-      'https://img.icons8.com/fluency/96/melon.png',
-      'https://img.icons8.com/officel/80/peach.png',
-      'https://img.icons8.com/cute-clipart/64/peach.png',
-      'https://img.icons8.com/color/96/raspberry.png',
-      'https://img.icons8.com/office/80/watermelon.png',
-      'https://img.icons8.com/cotton/64/citrus.png',
-      'https://img.icons8.com/stickers/100/pineapple.png',
-      'https://img.icons8.com/fluency/96/melon.png',
-      'https://img.icons8.com/matisse/100/dragon-fruit.png'
-    ],
-    cats: [
-      'https://img.icons8.com/bubbles/50/cat.png',
-      'https://img.icons8.com/dusk/64/cat--v1.png',
-      'https://img.icons8.com/pastel-glyph/64/cat--v1.png',
-      'https://img.icons8.com/3d-fluency/94/cat.png',
-      'https://img.icons8.com/pastel-glyph/64/cat--v3.png',
-      'https://img.icons8.com/3d-fluency/94/cat.png',
-      'https://img.icons8.com/pastel-glyph/64/cat--v1.png',
-      'https://img.icons8.com/emoji/96/cat-emoji.png',
-      'https://img.icons8.com/stickers/100/cat-footprint.png',
-      'https://img.icons8.com/office/80/cat--v1.png',
-      'https://img.icons8.com/pastel-glyph/64/cat--v3.png',
-      'https://img.icons8.com/keek/100/experimental-cat-keek.png',
-      'https://img.icons8.com/emoji/96/cat-emoji.png',
-      'https://img.icons8.com/dusk/64/cat-head--v1.png',
-      'https://img.icons8.com/office/80/cat--v1.png',
-      'https://img.icons8.com/dusk/64/cat--v1.png',
-      'https://img.icons8.com/dusk/64/cat-head--v1.png',
-      'https://img.icons8.com/bubbles/50/cat.png',
-      'https://img.icons8.com/stickers/100/cat-footprint.png',
-      'https://img.icons8.com/keek/100/experimental-cat-keek.png'
-    ]
+const cards = [
+   '<img width="100" height="100" src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-love-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" alt="external-love-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/officel/80/year-of-rat.png" alt="year-of-rat"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-color-line-collection-vinzence-studio/64/external-animal-mid-autumn-festival-color-line-collection-vinzence-studio.png" alt="external-animal-mid-autumn-festival-color-line-collection-vinzence-studio"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-app-icons-royyan-wijaya/64/external-animal-animal-hehe-app-icons-royyan-wijaya-2.png" alt="external-animal-animal-hehe-app-icons-royyan-wijaya-2"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-line-icons-royyan-wijaya/64/external-animal-hana-emojis-panda-edition-line-line-icons-royyan-wijaya-3.png" alt="external-animal-hana-emojis-panda-edition-line-line-icons-royyan-wijaya-3"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-color-line-collection-vinzence-studio/64/external-animal-mid-autumn-festival-color-line-collection-vinzence-studio.png" alt="external-animal-mid-autumn-festival-color-line-collection-vinzence-studio"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-line-icons-vinzence-studio/64/external-animal-mid-autumn-festival-line-icons-vinzence-studio.png" alt="external-animal-mid-autumn-festival-line-icons-vinzence-studio"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-app-icons-royyan-wijaya/64/external-animal-animalist-app-icons-royyan-wijaya-4.png" alt="external-animal-animalist-app-icons-royyan-wijaya-4"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-line-icons-royyan-wijaya/64/external-animal-hana-emojis-panda-edition-line-line-icons-royyan-wijaya-3.png" alt="external-animal-hana-emojis-panda-edition-line-line-icons-royyan-wijaya-3"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-flat-amoghdesign/64/external-animal-chinese-zodiac-flat-amoghdesign-2.png" alt="external-animal-chinese-zodiac-flat-amoghdesign-2"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/external-animal-life-of-amazon-filled-outline-filled-outline-icons-maxicons-3.png" alt="external-animal-life-of-amazon-filled-outline-filled-outline-icons-maxicons-3"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-flat-amoghdesign/64/external-animal-chinese-zodiac-flat-amoghdesign-2.png" alt="external-animal-chinese-zodiac-flat-amoghdesign-2"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-filled-outline-icons-maxicons/85/external-animal-life-of-amazon-filled-outline-filled-outline-icons-maxicons-3.png" alt="external-animal-life-of-amazon-filled-outline-filled-outline-icons-maxicons-3"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-love-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" alt="external-love-bull-emoji-vitaliy-gorbachev-lineal-color-vitaly-gorbachev"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-filled-outline-geotatah/64/external-animal-spring-color-filled-outline-geotatah.png" alt="external-animal-spring-color-filled-outline-geotatah"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-app-icons-royyan-wijaya/64/external-animal-animal-hehe-app-icons-royyan-wijaya-2.png" alt="external-animal-animal-hehe-app-icons-royyan-wijaya-2"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-app-icons-royyan-wijaya/64/external-animal-animalist-app-icons-royyan-wijaya-4.png" alt="external-animal-animalist-app-icons-royyan-wijaya-4"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-filled-outline-geotatah/64/external-animal-spring-color-filled-outline-geotatah.png" alt="external-animal-spring-color-filled-outline-geotatah"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/officel/80/year-of-rat.png" alt="year-of-rat"/>',
+   '<img width="100" height="100" src="https://img.icons8.com/external-line-icons-vinzence-studio/64/external-animal-mid-autumn-festival-line-icons-vinzence-studio.png" alt="external-animal-mid-autumn-festival-line-icons-vinzence-studio"/>'
+ ]
+  
+  let flippedCards = [];
+  let cardsEl = document.getElementsByClassName('game-box');
+  for (let i = 0; i < cardsEl.length; i++) {
+    cardsEl[i].addEventListener('click', flipCards);
   }
+ 
+  function flipCards() {
+    if (!this.classList.contains('flipped') && flippedCards.length < 2) {
+        this.innerHTML = cards[Array.prototype.indexOf.call(cardsEl, this)];
+        this.classList.add('flipped');
+        flippedCards.push(this);
+    }
+ 
+    if (flippedCards.length === 2) {
+        let firstCard = flippedCards[0];
+        let secondCard = flippedCards[1];
+ 
+        if (firstCard.innerHTML === secondCard.innerHTML) {
+            flippedCards = [];
+        } else {
+            setTimeout(function() {
+                firstCard.innerHTML = '';
+                secondCard.innerHTML = '';
+                firstCard.classList.remove('flipped');
+                secondCard.classList.remove('flipped');
+                flippedCards = [];
+            }, 500);
+        }
+     }
+  }
+
   

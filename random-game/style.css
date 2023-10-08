@@ -2,7 +2,6 @@ html {
     background: linear-gradient(25deg, rgb(232, 234, 224), rgb(193, 220, 248));
 }
 
-
 .game-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 40px;
@@ -30,6 +29,16 @@ html {
     cursor: pointer;
 }
 
+.game-box:active {
+    transform: scale(0.95);
+    transition: transform .1s;
+}
+
+.game-box.flipped {
+    transform: rotateY(180deg);
+    transition: 0.5s;
+  }
+
 .statistic {
     height: 30px;
 }
@@ -45,22 +54,7 @@ html {
     margin-left: 400px;
 }
 
-.div-themes {
-    display: flex;
-    flex-direction: column;
-    border: 3px solid;
-    border-color: rgb(17, 43, 77);
-    width: 350px;
-    align-items: center;
-    background-color: rgb(138, 186, 205);
-    position: absolute;
-    left: 36.5%;
-    bottom: 36.5%;
-    border-radius: 6px;
-    display: none;
-}
-
-.choose-theme, .h2-bravo {
+.h2-bravo {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
     color: #1e1052;
