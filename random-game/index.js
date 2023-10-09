@@ -23,8 +23,30 @@ const cards = [
   
   let flippedCards = [];
   let cardsEl = document.getElementsByClassName('game-box');
+  let startGame = false;
+  let score = 0;
+  let time = 0;
+  let timeElt = document.querySelector('.time');
+  let scoreElt = document.querySelector('.score');
+  let results = document.querySelector('.results');
+  let playAgain = document.querySelector('.play-again');
+
   for (let i = 0; i < cardsEl.length; i++) {
     cardsEl[i].addEventListener('click', flipCards);
+    startGame = true;
+  }
+
+  if (startGame = true) {
+    timer = setInterval(function() {
+        time++;
+        timeElt.innerHTML = time;
+        if (time === 40) {
+            results.style.display = 'block';
+            startGame = false;
+            time = 0;
+            clearInterval(timer);
+          }
+      }, 1000);
   }
  
   function flipCards() {
@@ -40,6 +62,8 @@ const cards = [
  
         if (firstCard.innerHTML === secondCard.innerHTML) {
             flippedCards = [];
+            score++;
+            scoreElt.innerHTML = score;
         } else {
             setTimeout(function() {
                 firstCard.innerHTML = '';
