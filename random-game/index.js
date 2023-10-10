@@ -30,20 +30,44 @@ const cards = [
   let scoreElt = document.querySelector('.score');
   let results = document.querySelector('.results');
   let playAgain = document.querySelector('.play-again');
+  let strResult = document.querySelector('.p-results');
 
   for (let i = 0; i < cardsEl.length; i++) {
     cardsEl[i].addEventListener('click', flipCards);
     startGame = true;
   }
 
+  playAgain.addEventListener('click', () => {
+    startGame = true;
+    location.reload();
+  });
+
   if (startGame = true) {
     timer = setInterval(function() {
         time++;
         timeElt.innerHTML = time;
-        if (time === 40) {
+        if (time === 5) {
+            strResult.innerHTML = 'Your result: ' + scoreElt.innerHTML + ' points';
+            let resultList = JSON.parse(localStorage.getItem('resultList')) || [];
+            const newResult = { result: score };
+            resultList.push(newResult);
+            localStorage.setItem('resultList', JSON.stringify(resultList));
+            resultList = JSON.parse(localStorage.getItem('resultList')) || [];
+            const table = document.querySelector('#result-table');
+            const tableBody = table.querySelector('tbody');
+            resultList.forEach(recordList => {
+                const tr = document.createElement('tr');
+                const nameTd = document.createElement('td');
+                const scoreTd = document.createElement('td');
+                JSON.parse(localStorage.getItem('recordList'));
+                nameTd.innerText = 'result:';
+                scoreTd.innerText = recordList.result;
+                tr.appendChild(nameTd);
+                tr.appendChild(scoreTd);
+                tableBody.appendChild(tr);
+            });
             results.style.display = 'block';
             startGame = false;
-            time = 0;
             clearInterval(timer);
           }
       }, 1000);
