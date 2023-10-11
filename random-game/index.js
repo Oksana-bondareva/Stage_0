@@ -20,6 +20,10 @@ const cards = [
    '<img width="100" height="100" src="https://img.icons8.com/officel/80/year-of-rat.png" alt="year-of-rat"/>',
    '<img width="100" height="100" src="https://img.icons8.com/external-line-icons-vinzence-studio/64/external-animal-mid-autumn-festival-line-icons-vinzence-studio.png" alt="external-animal-mid-autumn-festival-line-icons-vinzence-studio"/>'
  ]
+
+ let cardsRandom = cards.sort(function(){
+  return Math.random() - 0.5;
+});
   
   let flippedCards = [];
   let cardsEl = document.getElementsByClassName('game-box');
@@ -31,6 +35,7 @@ const cards = [
   let results = document.querySelector('.results');
   let playAgain = document.querySelector('.play-again');
   let strResult = document.querySelector('.p-results');
+  let modalOverlay = document.querySelector('.modal-overlay');
 
   for (let i = 0; i < cardsEl.length; i++) {
     cardsEl[i].addEventListener('click', flipCards);
@@ -46,7 +51,7 @@ const cards = [
     timer = setInterval(function() {
         time++;
         timeElt.innerHTML = time;
-        if (time === 5) {
+        if (time === 15) {
             strResult.innerHTML = 'Your result: ' + scoreElt.innerHTML + ' points';
             let resultList = JSON.parse(localStorage.getItem('resultList')) || [];
             const newResult = { result: score };
@@ -66,6 +71,7 @@ const cards = [
                 tr.appendChild(scoreTd);
                 tableBody.appendChild(tr);
             });
+            modalOverlay.style.display = 'block';
             results.style.display = 'block';
             startGame = false;
             clearInterval(timer);
@@ -75,7 +81,7 @@ const cards = [
  
   function flipCards() {
     if (!this.classList.contains('flipped') && flippedCards.length < 2) {
-        this.innerHTML = cards[Array.prototype.indexOf.call(cardsEl, this)];
+        this.innerHTML = cardsRandom[Array.prototype.indexOf.call(cardsEl, this)];
         this.classList.add('flipped');
         flippedCards.push(this);
     }
