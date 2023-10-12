@@ -42,6 +42,12 @@ const cards = [
     startGame = true;
   }
 
+  function soundGameOver() {
+    let audio = new Audio(); 
+    audio.src = './audio/8d3b1fa30e92ead.mp3';
+    audio.play();
+  }
+
   playAgain.addEventListener('click', () => {
     startGame = true;
     location.reload();
@@ -73,6 +79,7 @@ const cards = [
             });
             modalOverlay.style.display = 'block';
             results.style.display = 'block';
+            soundGameOver();
             startGame = false;
             clearInterval(timer);
           }
