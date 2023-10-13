@@ -48,16 +48,30 @@ const cards = [
     audio.play();
   }
 
+  function soundFlipCards() {
+    let audio = new Audio(); 
+    audio.src = './audio/875b8bd01943cfc.mp3';
+    audio.play();
+  }
+
+  function soundNotFlipCards() {
+    let audio = new Audio(); 
+    audio.src = './audio/9c9caa1ca9b1c21.mp3';
+    audio.play();
+  }
+
   playAgain.addEventListener('click', () => {
     startGame = true;
     location.reload();
   });
 
+ // localStorage.clear()
+
   if (startGame = true) {
     timer = setInterval(function() {
         time++;
         timeElt.innerHTML = time;
-        if (time === 15) {
+        if (time === 30) {
             strResult.innerHTML = 'Your result: ' + scoreElt.innerHTML + ' points';
             let resultList = JSON.parse(localStorage.getItem('resultList')) || [];
             const newResult = { result: score };
@@ -66,13 +80,13 @@ const cards = [
             resultList = JSON.parse(localStorage.getItem('resultList')) || [];
             const table = document.querySelector('#result-table');
             const tableBody = table.querySelector('tbody');
-            resultList.forEach(recordList => {
+            resultList.forEach(resultList => {
                 const tr = document.createElement('tr');
                 const nameTd = document.createElement('td');
                 const scoreTd = document.createElement('td');
-                JSON.parse(localStorage.getItem('recordList'));
+                JSON.parse(localStorage.getItem('resultList'));
                 nameTd.innerText = 'result:';
-                scoreTd.innerText = recordList.result;
+                scoreTd.innerText = resultList.result;
                 tr.appendChild(nameTd);
                 tr.appendChild(scoreTd);
                 tableBody.appendChild(tr);
@@ -99,10 +113,12 @@ const cards = [
  
         if (firstCard.innerHTML === secondCard.innerHTML) {
             flippedCards = [];
+            soundFlipCards()
             score++;
             scoreElt.innerHTML = score;
         } else {
             setTimeout(function() {
+                soundNotFlipCards()
                 firstCard.innerHTML = '';
                 secondCard.innerHTML = '';
                 firstCard.classList.remove('flipped');
